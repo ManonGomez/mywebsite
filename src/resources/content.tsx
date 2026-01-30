@@ -1,21 +1,23 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Manon",
+  lastName: "Gomez Mor",
+  name: "Manon Gomez Mor",
+  role: "Développeuse Full Stack",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "manongomezdev@gmail.com",
+  phone: "07 82 95 66 21",
+  location: "Aix-les-Bains",
+  timeZone: "Europe/Paris",
+  languages: ["Français", "Anglais"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Newsletter</>,
+  description: <>Inscription à la newsletter</>,
 };
 
 const social: Social = [
@@ -23,69 +25,57 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
+    link: "",
+    essential: false,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    name: "GitHub",
+    icon: "github",
+    link: "",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
+    link: "",
+    essential: false,
   },
   {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
-    essential: true,
+    essential: false,
   },
 ];
 
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Accueil",
+  title: `Portfolio – ${person.name}`,
+  description: `Développeuse web spécialisée PHP & WordPress : création, optimisation et maintenance de sites performants.`,
+  headline: <>Donner vie à votre site de rêve, de la conception à la mise en ligne</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: false,
+    title: <Row />,
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Je suis <Text as="span" size="xl" weight="strong">{person.firstName}</Text>, développeuse web passionnée,
+      spécialisée en <Text as="span" size="xl" weight="strong">PHP</Text> et{" "}
+      <Text as="span" size="xl" weight="strong">WordPress</Text> depuis 7 ans.
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: `À propos – ${person.name}`,
+  description: `Compétences et parcours de ${person.name} — ${person.role}, au service de votre équipe.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,211 +84,183 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Présentation",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+   Participer à des projets web innovants tout en mettant mon expérience au service de votre société et en développant de nouvelles compétences
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Expériences",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance",
+        timeframe: "Février 2022 - Aujourd'hui",
+        role: "Développeuse Full Stack",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Audit global des infrastructures existantes et accompagnement dans la prise de décision des clients.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Intégration & développement : HTML / CSS / PHP / React / WordPress.
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "IT-Akademy",
+        timeframe: "Janvier 2023 - Juillet 2025",
+        role: "Formatrice",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Formation en développement web et gestion de projet : PHP, POO, CMS/WordPress, UX Design, spécifications
+            fonctionnelles, méthodologies de projet et veille technologique.
           </>,
         ],
-        images: [],
+      },
+      {
+        company: "OpenClassrooms",
+        timeframe: "Octobre 2022 - Décembre 2024",
+        role: "Mentor",
+        achievements: [
+          <>Accompagnement d’étudiants sur le parcours Développeur WordPress / Intégrateur Web.</>,
+          <>Suivi de projets, bonnes pratiques, méthodologie et montée en compétences.</>,
+        ],
+      },
+      {
+        company: "CISS",
+        timeframe: "Mai 2022 - Octobre 2022",
+        role: "Développeuse Full Stack (Vue.js / Laravel)",
+        achievements: [
+          <>Participation à la TMA de projets de solutions de paiement.</>,
+          <>Bonnes pratiques de développement (Git, SVN, code review).</>,
+          <>Maquettage d’interfaces utilisateur (Figma).</>,
+        ],
+      },
+      {
+        company: "Synolia",
+        timeframe: "Septembre 2021 - Mars 2022",
+        role: "Développeuse e-commerce (Sylius)",
+        achievements: [
+          <>Participation à la TMA de projets e-commerce / développement Sylius.</>,
+          <>Bonnes pratiques (Git, code review, clean code).</>,
+          <>Participation aux projets Agile (Sprint, Backlog, Jira).</>,
+        ],
+      },
+      {
+        company: "Cyloé",
+        timeframe: "Août 2019 - Septembre 2021",
+        role: "Développement & intégration web",
+        achievements: [
+          <>Développement et intégration web (WordPress, Elementor, HTML, CSS, PHP).</>,
+          <>Analyse SEO et optimisation des performances.</>,
+          <>Définition du cahier des charges avec les clients et formation aux outils.</>,
+        ],
       },
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Formation",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Mastère 1 – Développeuse d’application full-stack — IT-AKADEMY (2019 - 2021)",
+        description: (
+          <>
+            -Génie logiciel (algorithmique, architectures<br />
+-Bases de données (conception, administration, optimisation)<br />
+-Développement web (Wordpress, Javascript, Design patterns PHP, Frameworks PHP, NodeJS, Green IT, sécurité, performance, API)<br />   
+-Programmation orientée objet (PHP, Python, C++, JAVA)<br />
+-Méthodes de développement (spécifications, qualité et industrialisation, DevOps)<br />
+-Gestion et chiffrage de projets<br />
+-Développement mobile (hybride NodeJS, natif iOS, natif Android)<br />
+-Programmation système (Shell, C)<br />
+-Droit informatique<br />
+-Marketing digital et e-commerce<br />
+-SEO<br />
+-Cloud computing (AWS)<br />
+-UX Design<br />
+-Initiation à l’IA , au Machine Learning et à la blockchain<br />
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "RNCP Niveau 5 (Bac +2) – Développeuse web — OpenClassrooms (2018 - 2019)",
+        description: (
+          <>
+            -Intégration en HTML5 et CSS<br />
+-Respect des standards et des normes du Web, référencement SEO, et optimisation pour tout type d’écran
+-Développement de pages dynamique en JavaScript<br />
+-Consommation de service API<br />
+-Programmation en orienté objet, gestion des erreurs et exceptions<br />
+-Créer, gérer et afficher le contenu d’une base de données
+          </>
+        ),
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Compétences techniques",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Hard skills",
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          { name: "HTML", icon: "html" },
+          { name: "CSS", icon: "css" },
+          { name: "Bootstrap", icon: "bootstrap" },
+          { name: "Tailwind", icon: "tailwind" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "React", icon: "react" },
+          { name: "Vue.js", icon: "vue" },
+          { name: "JavaScript Vanilla", icon: "javascript" },
+          { name: "PHP", icon: "php" },
+          { name: "Laravel", icon: "laravel" },
+          { name: "Symfony", icon: "symfony" },
+          { name: "Sylius", icon: "cart" },
+          { name: "PHP Vanilla", icon: "php" },
+          { name: "Node.js", icon: "nodejs" },
+          { name: "WordPress", icon: "wordpress" },
+          { name: "Prestashop", icon: "prestashop" },
+          { name: "Shopify", icon: "shopify" },
+          { name: "WiziShop", icon: "cart" },
+          { name: "MySQL", icon: "mysql" },
+          { name: "DNS", icon: "dns" },
+          { name: "SSL", icon: "ssl" },
+          { name: "FTP", icon: "ftp" },
+          { name: "Figma", icon: "figma" },
         ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Soft skills",
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          { name: "Organisation" },
+          { name: "Gestion de projet" },
+          { name: "Travail d'équipe" },
+          { name: "Motivation" },
+          { name: "Créativité" },
+          { name: "Mentorat" },
+          { name: "Formation" },
+          { name: "Veille technologique" },
         ],
       },
     ],
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
-
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Portfolio",
+  title: `Projets – ${person.name}`,
+  description: `Projets et réalisations de ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };

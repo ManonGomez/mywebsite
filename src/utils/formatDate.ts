@@ -1,36 +1,30 @@
 export function formatDate(date: string, includeRelative = false) {
-  const currentDate = new Date();
+  const now = new Date();
 
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
   }
 
-  const targetDate = new Date(date);
-  const yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
-  const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
-  const daysAgo = currentDate.getDate() - targetDate.getDate();
+  const target = new Date(date);
 
-  let formattedDate = "";
-
-  if (yearsAgo > 0) {
-    formattedDate = `${yearsAgo}y ago`;
-  } else if (monthsAgo > 0) {
-    formattedDate = `${monthsAgo}mo ago`;
-  } else if (daysAgo > 0) {
-    formattedDate = `${daysAgo}d ago`;
-  } else {
-    formattedDate = "Today";
-  }
-
-  const fullDate = targetDate.toLocaleString("en-us", {
-    month: "long",
+  const fullDate = target.toLocaleDateString("fr-FR", {
     day: "numeric",
+    month: "long",
     year: "numeric",
   });
 
-  if (!includeRelative) {
-    return fullDate;
-  }
+  if (!includeRelative) return fullDate;
 
-  return `${fullDate} (${formattedDate})`;
+  const rtf = new Intl.RelativeTimeFormat("fr", { numeric: "auto" });
+  const diffDays = Math.round((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+
+  // Pick a human-friendly unit.
+  const absDays = Math.abs(diffDays);
+  if (absDays < 30) return `${fullDate} (${rtf.format(diffDays, "day")})`;
+
+  const diffMonths = Math.round(diffDays / 30);
+  if (Math.abs(diffMonths) < 18) return `${fullDate} (${rtf.format(diffMonths, "month")})`;
+
+  const diffYears = Math.round(diffDays / 365);
+  return `${fullDate} (${rtf.format(diffYears, "year")})`;
 }

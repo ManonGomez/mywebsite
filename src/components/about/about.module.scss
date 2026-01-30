@@ -8,7 +8,74 @@
     }
 }
 
+.hoverCard {
+    transition: var(--transition-micro-medium);
+    will-change: transform, filter;
+
+    &:hover {
+        transform: translateY(calc(var(--static-space-2) * -1));
+        filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.18));
+    }
+}
+
+.contactBlock {
+    position: relative;
+    padding: var(--static-space-4);
+    border-radius: var(--radius-l);
+    overflow: hidden;
+}
+
+.contactBlock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(60% 60% at 20% 20%, rgba(0, 200, 255, 0.18), transparent 60%),
+        radial-gradient(60% 60% at 80% 70%, rgba(255, 80, 140, 0.10), transparent 60%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.contactBlock > * {
+    position: relative;
+}
+
+.rowHover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-2));
+    }
+}
+
+.liIcon {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.arrowList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.arrowList li {
+    list-style: none;
+}
+
+.sectionTitleCenter {
+    width: fit-content;
+    margin-inline: auto;
+    /* Compense la colonne gauche (flex 3) pour que le titre soit centré sur la page (colonne droite = 75%). */
+    transform: translateX(-16.666%);
+}
+
 @media (max-width: breakpoints.$s) {
+    .sectionTitleCenter {
+        transform: none;
+    }
+
     .textAlign {
         text-align: center;
     }

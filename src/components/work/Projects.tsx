@@ -1,6 +1,7 @@
 import { getPosts } from "@/utils/utils";
-import { Column } from "@once-ui-system/core";
+import { Column, Grid } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
+import { formatDate } from "@/utils/formatDate";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -24,20 +25,22 @@ export function Projects({ range, exclude }: ProjectsProps) {
     : sortedProjects;
 
   return (
-    <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      {displayedProjects.map((post, index) => (
-        <ProjectCard
-          priority={index < 2}
-          key={post.slug}
-          href={`/work/${post.slug}`}
-          images={post.metadata.images}
-          title={post.metadata.title}
-          description={post.metadata.summary}
-          content={post.content}
-          avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-          link={post.metadata.link || ""}
-        />
-      ))}
+    <Column fillWidth gap="24" marginBottom="40" paddingX="l">
+      <Grid fillWidth gap="16" columns={2} m={{ columns: 2 }} s={{ columns: 1 }}>
+        {displayedProjects.map((post, index) => (
+          <ProjectCard
+            priority={index < 2}
+            key={post.slug}
+            href={`/work/${post.slug}`}
+            images={post.metadata.images}
+            title={post.metadata.title}
+            description={post.metadata.summary}
+            avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
+            link={post.metadata.link || ""}
+            publishedAt={post.metadata.publishedAt ? formatDate(post.metadata.publishedAt) : undefined}
+          />
+        ))}
+      </Grid>
     </Column>
   );
 }

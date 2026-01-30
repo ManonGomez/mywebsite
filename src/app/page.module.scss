@@ -1,0 +1,117 @@
+@use "../components/breakpoints.scss" as breakpoints;
+
+.skillsGrid {
+  width: 100%;
+}
+
+.skillCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 176px;
+  display: flex;
+  overflow: hidden;
+  transition: var(--transition-micro-medium);
+  will-change: transform, filter;
+}
+
+.skillCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(60% 60% at 20% 25%, rgba(0, 200, 255, 0.18), transparent 60%),
+    radial-gradient(60% 60% at 80% 75%, rgba(255, 80, 140, 0.12), transparent 60%);
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.skillCard > * {
+  position: relative;
+}
+
+.skillCardContent {
+  width: 100%;
+}
+
+.skillCardDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.skillCard:hover {
+  transform: translateY(calc(var(--static-space-2) * -1));
+  filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.18));
+}
+
+@media (max-width: breakpoints.$s) {
+  .skillCard {
+    min-height: 0;
+  }
+}
+
+.portfolioCta {
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-micro-medium);
+  will-change: transform, filter;
+  min-height: 180px;
+}
+
+.portfolioCta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(70% 70% at 20% 30%, rgba(0, 200, 255, 0.18), transparent 60%),
+    radial-gradient(70% 70% at 85% 70%, rgba(255, 80, 140, 0.10), transparent 60%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.portfolioCta::after {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  border-radius: 999px;
+  background: radial-gradient(closest-side, rgba(0, 200, 255, 0.14), transparent 70%);
+  filter: blur(8px);
+  opacity: 0.8;
+  transform: translate3d(-10%, -10%, 0);
+  animation: portfolioGlow 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.portfolioCta > * {
+  position: relative;
+}
+
+.portfolioCta:hover {
+  transform: translateY(calc(var(--static-space-2) * -1));
+  filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.18));
+}
+
+.portfolioIcon {
+  transition: var(--transition-micro-medium);
+}
+
+.portfolioCta:hover .portfolioIcon {
+  transform: translateY(calc(var(--static-space-1) * -1));
+}
+
+@keyframes portfolioGlow {
+  0% {
+    transform: translate3d(-10%, -10%, 0);
+  }
+  50% {
+    transform: translate3d(18%, 12%, 0);
+  }
+  100% {
+    transform: translate3d(-10%, -10%, 0);
+  }
+}
+

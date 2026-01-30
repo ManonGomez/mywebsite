@@ -5,7 +5,10 @@ import {
   Heading,
   Icon,
   IconButton,
+  Line,
   Media,
+  RevealFx,
+  SmartLink,
   Tag,
   Text,
   Meta,
@@ -22,7 +25,7 @@ export async function generateMetadata() {
     title: about.title,
     description: about.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
+    image: "/images/og/home.jpg",
     path: about.path,
   });
 }
@@ -58,7 +61,7 @@ export default function About() {
         title={about.title}
         description={about.description}
         path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
+        image="/images/og/home.jpg"
         author={{
           name: person.name,
           url: `${baseURL}${about.path}`,
@@ -93,11 +96,40 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
+            <RevealFx translateY="12">
+              <Column fillWidth gap="m" horizontal="center">
             <Avatar src={person.avatar} size="xl" />
-            <Row gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+                <Column fillWidth gap="12" className={styles.contactBlock}>
+                  {person.phone && (
+                    <Row gap="8" vertical="center" className={styles.rowHover}>
+                      <Icon onBackground="brand-weak" name="phone" />
+                      <SmartLink
+                        href={`tel:${person.phone.replace(/\s/g, "")}`}
+                        suffixIcon="arrowUpRightFromSquare"
+                      >
+                        <Text variant="body-default-s">{person.phone}</Text>
+                      </SmartLink>
+                    </Row>
+                  )}
+                  <Row gap="8" vertical="center" className={styles.rowHover}>
+                    <Icon onBackground="brand-weak" name="email" />
+                    <SmartLink href={`mailto:${person.email}`} suffixIcon="arrowUpRightFromSquare">
+                      <Text variant="body-default-s">{person.email}</Text>
+                    </SmartLink>
+                  </Row>
+                <Row gap="8" vertical="center" className={styles.rowHover}>
+                  <Icon onBackground="brand-weak" name="linkedin" />
+                  <Text variant="body-default-s">@manon-gomez-mor</Text>
+                </Row>
+                  <Row gap="8" vertical="center" className={styles.rowHover}>
+                    <Icon onBackground="brand-weak" name="globe" />
+                    <Text variant="body-default-s">{person.location}</Text>
+                  </Row>
+                <Row gap="8" vertical="center" className={styles.rowHover}>
+                  <Icon onBackground="brand-weak" name="car" />
+                  <Text variant="body-default-s">Permis B — véhiculée</Text>
             </Row>
+                </Column>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -107,6 +139,8 @@ export default function About() {
                 ))}
               </Row>
             )}
+              </Column>
+            </RevealFx>
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
@@ -142,17 +176,18 @@ export default function About() {
                 />
               </Row>
             )}
+            <RevealFx translateY="8">
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
-            <Text
-              className={styles.textAlign}
-              variant="display-default-xs"
-              onBackground="neutral-weak"
-            >
+            </RevealFx>
+            <RevealFx translateY="8" delay={0.1}>
+              <Text className={styles.textAlign} variant="display-default-xs" onBackground="neutral-weak">
               {person.role}
             </Text>
-            {social.length > 0 && (
+            </RevealFx>
+            {social.some((item) => item.essential && Boolean(item.link)) && (
+              <RevealFx translateY="8" delay={0.2}>
               <Row
                 className={styles.blockAlign}
                 paddingTop="20"
@@ -193,23 +228,41 @@ export default function About() {
                     ),
                 )}
               </Row>
+              </RevealFx>
             )}
           </Column>
 
           {about.intro.display && (
+            <RevealFx translateY="12" delay={0.25}>
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
             </Column>
+            </RevealFx>
           )}
 
           {about.work.display && (
             <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+              <RevealFx translateY="12" delay={0.15}>
+                <Row fillWidth marginBottom="m">
+                  <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
+                    <Icon name="rocket" onBackground="brand-weak" />
+                    <Heading as="h2" id={about.work.title} variant="display-strong-s">
                 {about.work.title}
               </Heading>
+                  </Row>
+                </Row>
+                <Row fillWidth paddingY="24">
+                  <Line background="brand-alpha-weak" />
+                </Row>
+              </RevealFx>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
+                  <RevealFx
+                    key={`${experience.company}-${experience.role}-${index}`}
+                    translateY="12"
+                    delay={0.05 + index * 0.05}
+                  >
+                    <Column className={styles.hoverCard} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
@@ -221,7 +274,7 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
-                    <Column as="ul" gap="16">
+                    <Column as="ul" gap="16" className={styles.arrowList}>
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
                           <Text
@@ -229,6 +282,7 @@ export default function About() {
                             variant="body-default-m"
                             key={`${experience.company}-${index}`}
                           >
+                            <Icon className={styles.liIcon} name="arrowRight" onBackground="brand-weak" />
                             {achievement}
                           </Text>
                         ),
@@ -256,6 +310,7 @@ export default function About() {
                       </Row>
                     )}
                   </Column>
+                  </RevealFx>
                 ))}
               </Column>
             </>
@@ -263,12 +318,23 @@ export default function About() {
 
           {about.studies.display && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+              <RevealFx translateY="12" delay={0.15}>
+                <Row fillWidth marginBottom="m">
+                  <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
+                    <Icon name="document" onBackground="brand-weak" />
+                    <Heading as="h2" id={about.studies.title} variant="display-strong-s">
                 {about.studies.title}
               </Heading>
+                  </Row>
+                </Row>
+                <Row fillWidth paddingY="24">
+                  <Line background="brand-alpha-weak" />
+                </Row>
+              </RevealFx>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                  <RevealFx key={`${institution.name}-${index}`} translateY="12" delay={0.05 + index * 0.05}>
+                    <Column className={styles.hoverCard} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
@@ -276,6 +342,7 @@ export default function About() {
                       {institution.description}
                     </Text>
                   </Column>
+                  </RevealFx>
                 ))}
               </Column>
             </>
@@ -283,20 +350,29 @@ export default function About() {
 
           {about.technical.display && (
             <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
+              <RevealFx translateY="12" delay={0.15}>
+                <Row fillWidth marginBottom="40">
+                  <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
+                    <Icon name="grid" onBackground="brand-weak" />
+                    <Heading as="h2" id={about.technical.title} variant="display-strong-s">
                 {about.technical.title}
               </Heading>
+                  </Row>
+                </Row>
+                <Row fillWidth paddingY="24">
+                  <Line background="brand-alpha-weak" />
+                </Row>
+              </RevealFx>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <RevealFx key={`${skill}-${index}`} translateY="12" delay={0.05 + index * 0.05}>
+                    <Column className={styles.hoverCard} fillWidth gap="4">
+                      <Row gap="12" vertical="center">
+                        <Icon name="grid" onBackground="brand-weak" />
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
                     </Text>
+                      </Row>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
@@ -331,6 +407,7 @@ export default function About() {
                       </Row>
                     )}
                   </Column>
+                  </RevealFx>
                 ))}
               </Column>
             </>
