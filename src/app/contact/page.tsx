@@ -1,6 +1,7 @@
 import { Column, Heading, Line, Meta, Row, Schema, SmartLink, Text } from "@once-ui-system/core";
 import { baseURL, person } from "@/resources";
 import TallyEmbed from "./TallyEmbed";
+import CalEmbed from "./CalEmbed";
 
 const path = "/contact";
 
@@ -46,6 +47,18 @@ export default function ContactPage() {
         </Text>
 
         <TallyEmbed />
+
+        <Row fillWidth paddingY="24">
+          <Line />
+        </Row>
+
+        <Heading wrap="balance" variant="heading-strong-l">
+          Prendre rendez-vous
+        </Heading>
+        <Text wrap="balance" onBackground="neutral-weak" variant="body-default-m">
+          Choisissez un créneau directement dans mon calendrier.
+        </Text>
+        <CalEmbed />
 
         <Row fillWidth paddingY="24">
           <Line />

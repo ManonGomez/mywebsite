@@ -207,7 +207,7 @@ const about: About = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Compétences techniques",
+    title: "Compétences",
     skills: [
       {
         title: "Hard skills",

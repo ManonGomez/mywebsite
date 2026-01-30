@@ -14,6 +14,7 @@ import {
   Meta,
   Schema,
   Row,
+  Card,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -412,6 +413,41 @@ export default function About() {
               </Column>
             </>
           )}
+
+          <RevealFx translateY="12" delay={0.2}>
+            <Column fillWidth paddingTop="xl">
+              <Card
+                href="/contact"
+                background="surface"
+                border="brand-alpha-weak"
+                radius="l"
+                padding="xl"
+                shadow="m"
+                cursor="interactive"
+              >
+                <Row
+                  fillWidth
+                  horizontal="between"
+                  vertical="center"
+                  s={{ direction: "column", horizontal: "start" }}
+                  gap="16"
+                >
+                  <Column gap="12">
+                    <Row gap="12" vertical="center">
+                      <Icon name="calendar" onBackground="brand-weak" />
+                      <Text variant="heading-strong-xl">Prendre rendez-vous</Text>
+                    </Row>
+                    <Text variant="body-default-l" onBackground="neutral-weak">
+Envie d'échanger ? Je suis disponible pour un rendez-vous.
+                    </Text>
+                  </Column>
+                  <Button href="/contact" variant="primary" size="m" arrowIcon>
+                    Voir le calendrier
+                  </Button>
+                </Row>
+              </Card>
+            </Column>
+          </RevealFx>
         </Column>
       </Row>
     </Column>
