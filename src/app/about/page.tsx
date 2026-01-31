@@ -417,13 +417,11 @@ export default function About() {
           <RevealFx translateY="12" delay={0.2}>
             <Column fillWidth paddingTop="xl">
               <Card
-                href="/contact"
                 background="surface"
                 border="brand-alpha-weak"
                 radius="l"
                 padding="xl"
                 shadow="m"
-                cursor="interactive"
               >
                 <Row
                   fillWidth

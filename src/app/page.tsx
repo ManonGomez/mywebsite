@@ -368,14 +368,12 @@ export default function Home() {
       <RevealFx translateY="12" delay={0.85}>
         <Column fillWidth paddingX="l">
           <Card
-            href="/work"
             className={styles.portfolioCta}
             background="surface"
             border="brand-alpha-weak"
             radius="l"
             padding="xl"
             shadow="m"
-            cursor="interactive"
           >
             <Row
               fillWidth

@@ -21,11 +21,22 @@ export const Footer = () => {
           align: "center",
         }}
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
-
-        </Text>
+        <Row gap="8" wrap vertical="center" horizontal="center">
+          <Text variant="body-default-s" onBackground="neutral-weak">
+            © {currentYear}
+          </Text>
+          <Text variant="body-default-s" onBackground="neutral-strong">
+            {person.name}
+          </Text>
+          <Text variant="body-default-s" onBackground="neutral-weak">
+            •
+          </Text>
+          <SmartLink href="/mentions-legales">
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Mentions légales
+            </Text>
+          </SmartLink>
+        </Row>
         <Row gap="16">
           {social.map(
             (item) =>
