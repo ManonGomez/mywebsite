@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Manon",
   lastName: "Gomez Mor",
   name: "Manon Gomez Mor",
-  role: "Cheffe de projet IT junior",
+  role: "Cheffe de projet IT",
   avatar: "/images/avatar.jpg",
   email: "manongomezdev@gmail.com",
   phone: "07 82 95 66 21",
@@ -116,7 +116,7 @@ const about: About = {
       },
       {
         company: "IT-Akademy",
-        timeframe: "Janvier 2023 - Juillet 2025",
+        timeframe: "Janvier 2023 - Avril 2026",
         role: "Formatrice",
         achievements: [
           <>Formation en développement web & gestion de projet.</>,
