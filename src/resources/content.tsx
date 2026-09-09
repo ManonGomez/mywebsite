@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Manon",
   lastName: "Gomez Mor",
   name: "Manon Gomez Mor",
-  role: "Développeuse Full Stack",
+  role: "Cheffe de projet IT junior",
   avatar: "/images/avatar.jpg",
   email: "manongomezdev@gmail.com",
   phone: "07 82 95 66 21",
@@ -87,12 +87,15 @@ const about: About = {
     display: false,
     link: "",
   },
+  tagline: "Gestion de projet • Coordination • Web & Digital • Développement",
   intro: {
     display: true,
     title: "Présentation",
     description: (
       <>
-   Participer à des projets web innovants tout en mettant mon expérience au service de votre société et en développant de nouvelles compétences
+        Participer à des projets web innovants en mettant mon expérience technique et
+        organisationnelle au service de votre société et en développant mes compétences en
+        gestion de projet.
       </>
     ),
   },
@@ -105,12 +108,10 @@ const about: About = {
         timeframe: "Février 2022 - Aujourd'hui",
         role: "Développeuse Full Stack",
         achievements: [
-          <>
-            Audit global des infrastructures existantes et accompagnement dans la prise de décision des clients.
-          </>,
-          <>
-            Intégration & développement : HTML / CSS / PHP / React / WordPress.
-          </>,
+          <>Audit et analyse des environnements existants.</>,
+          <>Recueil des besoins & accompagnement client.</>,
+          <>Conseil et aide à la prise de décision.</>,
+          <>Intégration & développement : HTML / CSS / PHP / React / WordPress.</>,
         ],
       },
       {
@@ -118,10 +119,9 @@ const about: About = {
         timeframe: "Janvier 2023 - Juillet 2025",
         role: "Formatrice",
         achievements: [
-          <>
-            Formation en développement web et gestion de projet : PHP, POO, CMS/WordPress, UX Design, spécifications
-            fonctionnelles, méthodologies de projet et veille technologique.
-          </>,
+          <>Formation en développement web & gestion de projet.</>,
+          <>Spécifications fonctionnelles & méthodologies projet.</>,
+          <>UX Design, CMS/WordPress & veille technologique.</>,
         ],
       },
       {
@@ -138,9 +138,10 @@ const about: About = {
         timeframe: "Mai 2022 - Octobre 2022",
         role: "Développeuse Full Stack (Vue.js / Laravel)",
         achievements: [
-          <>Participation à la TMA de projets de solutions de paiement.</>,
-          <>Bonnes pratiques de développement (Git, SVN, code review).</>,
-          <>Maquettage d’interfaces utilisateur (Figma).</>,
+          <>Participation à la TMA de solutions de paiement.</>,
+          <>Développement Vue.js & Laravel.</>,
+          <>Maquettage d’interfaces sur Figma.</>,
+          <>Git, SVN & code review.</>,
         ],
       },
       {
@@ -148,9 +149,9 @@ const about: About = {
         timeframe: "Septembre 2021 - Mars 2022",
         role: "Développeuse e-commerce (Sylius)",
         achievements: [
-          <>Participation à la TMA de projets e-commerce / développement Sylius.</>,
-          <>Bonnes pratiques (Git, code review, clean code).</>,
-          <>Participation aux projets Agile (Sprint, Backlog, Jira).</>,
+          <>Participation à la TMA de projets e-commerce.</>,
+          <>Travail en environnement Agile : Sprint, Backlog & Jira.</>,
+          <>Développement Sylius, Git & code review.</>,
         ],
       },
       {
@@ -158,9 +159,10 @@ const about: About = {
         timeframe: "Août 2019 - Septembre 2021",
         role: "Développement & intégration web",
         achievements: [
-          <>Développement et intégration web (WordPress, Elementor, HTML, CSS, PHP).</>,
-          <>Analyse SEO et optimisation des performances.</>,
-          <>Définition du cahier des charges avec les clients et formation aux outils.</>,
+          <>Recueil des besoins & définition du cahier des charges client.</>,
+          <>Développement & intégration de solutions web.</>,
+          <>Analyse SEO & optimisation des performances.</>,
+          <>Formation et accompagnement des clients.</>,
         ],
       },
     ],
@@ -178,7 +180,7 @@ const about: About = {
 -Développement web (Wordpress, Javascript, Design patterns PHP, Frameworks PHP, NodeJS, Green IT, sécurité, performance, API)<br />   
 -Programmation orientée objet (PHP, Python, C++, JAVA)<br />
 -Méthodes de développement (spécifications, qualité et industrialisation, DevOps)<br />
--Gestion et chiffrage de projets<br />
+-Gestion et chiffrage de projets (recueil des besoins, rédaction de devis et de cahiers des charges, planification et suivi de planning, coordination des parties prenantes)<br />
 -Développement mobile (hybride NodeJS, natif iOS, natif Android)<br />
 -Programmation système (Shell, C)<br />
 -Droit informatique<br />
@@ -211,6 +213,19 @@ const about: About = {
     skills: [
       {
         title: "Hard skills",
+        description: "Gestion de projet et méthodologie.",
+        tags: [
+          { name: "Gestion de projet" },
+          { name: "Analyse des besoins" },
+          { name: "Cahier des charges" },
+          { name: "Chiffrage / estimation" },
+          { name: "Spécifications fonctionnelles" },
+          { name: "Méthodes Agile / Jira" },
+        ],
+      },
+      {
+        title: "Technique",
+        description: "Stack et outils de développement web.",
         tags: [
           { name: "HTML", icon: "html" },
           { name: "CSS", icon: "css" },
@@ -241,13 +256,11 @@ const about: About = {
         title: "Soft skills",
         tags: [
           { name: "Organisation" },
-          { name: "Gestion de projet" },
-          { name: "Travail d'équipe" },
-          { name: "Motivation" },
-          { name: "Créativité" },
-          { name: "Mentorat" },
-          { name: "Formation" },
-          { name: "Veille technologique" },
+          { name: "Rigueur" },
+          { name: "Détermination" },
+          { name: "Persévérance" },
+          { name: "Communication" },
+          { name: "Autonomie" },
         ],
       },
     ],

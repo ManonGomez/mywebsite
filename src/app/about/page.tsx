@@ -187,6 +187,18 @@ export default function About() {
               {person.role}
             </Text>
             </RevealFx>
+            {about.tagline && (
+              <RevealFx translateY="8" delay={0.15}>
+                <Text
+                  className={styles.textAlign}
+                  variant="body-default-m"
+                  onBackground="brand-weak"
+                  marginTop="4"
+                >
+                  {about.tagline}
+                </Text>
+              </RevealFx>
+            )}
             {social.some((item) => item.essential && Boolean(item.link)) && (
               <RevealFx translateY="8" delay={0.2}>
               <Row

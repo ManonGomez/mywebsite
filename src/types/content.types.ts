@@ -112,6 +112,8 @@ export interface Home extends BasePageConfig {
  * @description Configuration for the About page, including sections for table of contents, avatar, calendar, introduction, work experience, studies, and technical skills.
  */
 export interface About extends BasePageConfig {
+  /** Short tagline displayed under the person's role */
+  tagline?: React.ReactNode;
   /** Table of contents configuration */
   tableOfContent: {
     /** Whether to display the table of contents */
