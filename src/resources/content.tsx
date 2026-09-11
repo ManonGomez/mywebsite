@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Manon",
   lastName: "Gomez Mor",
   name: "Manon Gomez Mor",
-  role: "Cheffe de projet IT",
+  role: "Cheffe de projet IT | Gestion de projet web | Développeuse Full-Stack",
   avatar: "/images/avatar.jpg",
   email: "manongomezdev@gmail.com",
   phone: "07 82 95 66 21",
@@ -27,7 +27,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "",
+    link: "https://www.linkedin.com/in/manongomez-mor-251b0b170",
     essential: false,
   },
   {
@@ -93,9 +93,12 @@ const about: About = {
     title: "Présentation",
     description: (
       <>
-        Participer à des projets web innovants en mettant mon expérience technique et
-        organisationnelle au service de votre société et en développant mes compétences en
-        gestion de projet.
+        Développeuse full-stack devenue passionnée de coordination et de pilotage de projets
+        web, j&apos;aime faire le lien entre les besoins métiers, les utilisateurs et les
+        équipes techniques pour faire avancer les projets de manière claire et pragmatique.
+        Après plusieurs années en indépendante, je recherche aujourd&apos;hui un poste de
+        cheffe de projet IT ou de coordinatrice de projets web, dans la continuité de mon
+        parcours technique.
       </>
     ),
   },
@@ -108,19 +111,15 @@ const about: About = {
         timeframe: "Février 2022 - Aujourd'hui",
         role: "Développeuse Full Stack",
 achievements: [
-  <>Gestion complète de projets web en autonomie, de la prospection commerciale au suivi après mise en production.</>,
-  <>Recherche de clients, qualification des demandes et conduite des premiers échanges afin d’identifier les objectifs, contraintes et priorités.</>,
-  <>Audit et analyse des sites, outils et environnements techniques existants.</>,
-  <>Recueil, clarification et traduction des besoins clients en solutions fonctionnelles et techniques adaptées.</>,
-  <>Conseil et accompagnement dans les choix techniques, fonctionnels et stratégiques, en tenant compte du budget, des délais et des usages.</>,
-  <>Élaboration des propositions commerciales, estimation des charges, chiffrage des projets, rédaction des devis et contractualisation.</>,
-  <>Planification des étapes, organisation des tâches et suivi de l’avancement jusqu’à la livraison.</>,
-  <>Conception, maquettage, intégration et développement de sites vitrines, plateformes web, fonctionnalités sur mesure et solutions e-commerce.</>,
-  <>Organisation de réunions de suivi pour présenter les avancées, recueillir les retours et ajuster les solutions proposées.</>,
-  <>Réalisation des recettes, correction des anomalies et mise en production.</>,
+  <>Gestion complète de projets web en autonomie, de la prospection commerciale au suivi post-production.</>,
+  <>Qualification des besoins clients (objectifs, contraintes, priorités) et audit technique de l’existant.</>,
+  <>Traduction des besoins en solutions adaptées, avec conseil sur les choix techniques et stratégiques.</>,
+  <>Chiffrage, devis et contractualisation, puis planification et suivi jusqu’à la livraison.</>,
+  <>Conception et développement de sites vitrines, plateformes web et solutions e-commerce sur mesure.</>,
+  <>Réunions de suivi, recette et correction des anomalies avant mise en production.</>,
   <>Formation des clients à l’utilisation et à l’administration de leurs outils.</>,
-  <>Maintenance corrective et évolutive, assistance technique et accompagnement dans la durée.</>,
-  <>Optimisation de l’expérience utilisateur, du référencement naturel et des performances des sites.</>,
+  <>Maintenance corrective et évolutive, assistance technique dans la durée.</>,
+  <>Optimisation de l’expérience utilisateur, du SEO et des performances des sites.</>,
 ],
       },
       {
@@ -128,13 +127,10 @@ achievements: [
         timeframe: "Janvier 2023 - Avril 2026",
         role: "Formatrice",
 achievements: [
-  <>Préparation et animation de formations en développement web, conception de projets numériques et expérience utilisateur.</>,
-  <>Transmission de concepts techniques à des publics de niveaux variés, avec une approche progressive mêlant théorie et mises en pratique.</>,
-  <>Accompagnement des apprenants dans l’acquisition de compétences, la compréhension des problématiques techniques et la résolution de difficultés.</>,
-  <>Sensibilisation aux bonnes pratiques de développement, à la qualité du code, à l’accessibilité et à l’expérience utilisateur.</>,
-  <>Formation aux étapes de préparation d’un projet web : analyse du besoin, spécifications, estimation des charges et initiation au chiffrage.</>,
-  <>Accompagnement à la mise en place d’une veille technologique et professionnelle structurée.</>,
-  <>Enseignements dispensés : Développement front-end (HTML5, CSS3, JavaScript) / Intégration web, UX et transition numérique / WordPress et WooCommerce / PHP procédural et orienté objet / Écosystème PHP et outils du marché / Spécifications fonctionnelles et techniques / Méthodologie et initiation au chiffrage / Veille technologique et professionnelle.</>,
+  <>Conception et animation de formations en développement web, projets numériques et UX, pour des publics variés (Bac+2 à Bac+5).</>,
+  <>Accompagnement individuel des apprenants : acquisition de compétences, résolution de difficultés, bonnes pratiques de code et d’accessibilité.</>,
+  <>Formation aux étapes clés d’un projet web (analyse du besoin, spécifications, chiffrage) et à la veille technologique.</>,
+  <>Enseignements dispensés : Développement front-end (HTML5, CSS3 et JavaScript) / Intégration web, UX et nouveaux usages liés à la transition numérique / Création de sites avec WordPress et de boutiques e-commerce avec WooCommerce / Programmation procédurale et programmation orientée objet en PHP / Écosystème PHP et prise en main des principaux outils du marché / Conception et rédaction de spécifications fonctionnelles et techniques / Méthodologie et initiation au chiffrage de projets / Veille technologique et professionnelle.</>,
 ],
       },
       {
@@ -142,27 +138,19 @@ achievements: [
         timeframe: "Octobre 2022 - Décembre 2024",
         role: "Mentor",
 achievements: [
-  <>Accompagnement individuel d’étudiants suivant les parcours Développeur WordPress et Intégrateur Web.</>,
-  <>Suivi régulier de leur progression et de l’avancement de leurs projets.</>,
-  <>Aide à l’organisation du travail, à la définition des prochaines étapes et au respect des objectifs pédagogiques.</>,
-  <>Accompagnement dans l’analyse des problématiques rencontrées et la recherche de solutions adaptées.</>,
-  <>Transmission des bonnes pratiques en développement web, intégration, méthodologie de projet et qualité du code.</>,
-  <>Réalisation de retours constructifs sur les travaux présentés afin de favoriser la montée en compétences et l’autonomie.</>,
-  <>Adaptation de l’accompagnement au niveau, au rythme et aux difficultés propres à chaque étudiant.</>,
+  <>Accompagnement individuel d’étudiants des parcours Développeur WordPress et Intégrateur Web : suivi de progression, organisation du travail et résolution de difficultés.</>,
+  <>Transmission des bonnes pratiques (développement, intégration, qualité du code) et retours constructifs pour favoriser la montée en compétences.</>,
+  <>Adaptation de l’accompagnement au niveau et au rythme de chaque étudiant.</>,
 ],
       },
       {
         company: "CISS",
-        timeframe: "Mai 2022 - Octobre 2022",
+        timeframe: "Mai 2022 - Novembre 2022",
         role: "Développeuse Full Stack (Vue.js / Laravel)",
   achievements: [
-  <>Participation à la tierce maintenance applicative (TMA) de solutions de paiement.</>,
-  <>Prise en charge et suivi des tickets : analyse des demandes, identification des besoins techniques et réalisation des développements.</>,
-  <>Développement de fonctionnalités et réalisation de corrections avec Vue.js et Laravel.</>,
-  <>Participation au maquettage et à la conception d’interfaces utilisateur sur Figma.</>,
-  <>Travail en équipe selon une organisation Kanban : suivi de l’avancement des tickets, gestion des priorités et mise à jour de leur statut.</>,
-  <>Utilisation de Git et SVN pour la gestion des versions et le suivi des modifications.</>,
-  <>Participation aux revues de code afin de garantir la qualité et la maintenabilité des développements.</>,
+  <>TMA de solutions de paiement : prise en charge des tickets, développement de fonctionnalités et correctifs avec Vue.js et Laravel.</>,
+  <>Maquettage d’interfaces sur Figma et participation aux revues de code.</>,
+  <>Travail en équipe en Kanban, gestion des versions avec Git et SVN.</>,
 ],
       },
       {
@@ -170,14 +158,9 @@ achievements: [
         timeframe: "Septembre 2021 - Mars 2022",
         role: "Développeuse e-commerce (Sylius)",
     achievements: [
-  <>Participation à la tierce maintenance applicative (TMA) de plusieurs projets e-commerce développés avec Sylius.</>,
-  <>Prise en charge des tickets : analyse du besoin, compréhension du contexte fonctionnel et identification de la solution technique.</>,
-  <>Développement de correctifs et d’évolutions fonctionnelles, dans le respect des spécifications et contraintes propres à chaque projet.</>,
-  <>Estimation, suivi et mise à jour de l’avancement des tâches dans Jira.</>,
-  <>Participation aux cérémonies Agiles : réunions d’équipe, planification des sprints, points de suivi et rétrospectives.</>,
-  <>Travail à partir d’un backlog structuré et respect des priorités définies par l’équipe projet.</>,
-  <>Utilisation de Git pour le versionnement du code et participation aux processus de code review.</>,
-  <>Collaboration avec les développeurs et les membres de l’équipe afin d’assurer la qualité et la bonne intégration des développements.</>,
+  <>TMA de projets e-commerce Sylius : analyse des tickets, développement de correctifs et d’évolutions fonctionnelles.</>,
+  <>Estimation et suivi des tâches dans Jira, participation aux cérémonies Agiles (sprints, rétrospectives) et au backlog d’équipe.</>,
+  <>Versionnement avec Git, code review et collaboration avec l’équipe de développement.</>,
 ],
       },
       {
@@ -185,16 +168,12 @@ achievements: [
         timeframe: "Août 2019 - Septembre 2021",
         role: "Développement & intégration web",
        achievements: [
-  <>Pilotage de projets web de A à Z, depuis le recueil du besoin jusqu’à la mise en production et au suivi après livraison.</>,
-  <>Organisation et animation des échanges clients afin d’identifier leurs besoins, objectifs, contraintes et fonctionnalités attendues.</>,
-  <>Planification des étapes, priorisation des tâches et suivi des délais pour garantir des livraisons conformes aux engagements.</>,
-  <>Conception, développement et intégration de sites vitrines, plateformes avec fonctionnalités spécifiques et sites e-commerce.</>,
-  <>Gestion de l’environnement technique : hébergement, installation, développement, paramétrage, déploiement et mise en production.</>,
-  <>Réalisation des recettes, identification et correction des anomalies avant livraison.</>,
-  <>Maintenance corrective et évolutive, résolution des incidents techniques et accompagnement des demandes d’évolution.</>,
-  <>Analyse SEO, optimisation des performances, de l’affichage et de l’expérience utilisateur.</>,
-  <>Formation des clients à l’utilisation et à l’administration de leurs outils, avec création de supports si nécessaire.</>,
-  <>Gestion simultanée de projets variés pour différents clients, avec autonomie et responsabilité directe sur la qualité des livrables.</>,
+  <>Pilotage de projets web de A à Z : recueil du besoin, planification et suivi jusqu’à la livraison.</>,
+  <>Conception et développement de sites vitrines, plateformes sur mesure et sites e-commerce.</>,
+  <>Gestion complète de l’environnement technique (hébergement, déploiement, mise en production) et recette avant livraison.</>,
+  <>Maintenance corrective et évolutive, analyse SEO et optimisation des performances et de l’UX.</>,
+  <>Formation des clients à l’utilisation de leurs outils, avec accompagnement dans la durée.</>,
+  <>Gestion simultanée de plusieurs clients de l’agence, en forte autonomie.</>,
 ],
       },
     ],
@@ -207,20 +186,12 @@ achievements: [
         name: "Mastère 1 – Développeuse d’application full-stack — IT-AKADEMY (2019 - 2021)",
         description: (
           <>
-            -Génie logiciel (algorithmique, architectures<br />
--Bases de données (conception, administration, optimisation)<br />
--Développement web (Wordpress, Javascript, Design patterns PHP, Frameworks PHP, NodeJS, Green IT, sécurité, performance, API)<br />   
--Programmation orientée objet (PHP, Python, C++, JAVA)<br />
--Méthodes de développement (spécifications, qualité et industrialisation, DevOps)<br />
--Gestion et chiffrage de projets (recueil des besoins, rédaction de devis et de cahiers des charges, planification et suivi de planning, coordination des parties prenantes)<br />
--Développement mobile (hybride NodeJS, natif iOS, natif Android)<br />
--Programmation système (Shell, C)<br />
--Droit informatique<br />
--Marketing digital et e-commerce<br />
--SEO<br />
--Cloud computing (AWS)<br />
--UX Design<br />
--Initiation à l’IA , au Machine Learning et à la blockchain<br />
+            -Génie logiciel, architectures et bases de données<br />
+-Développement web (WordPress, JavaScript, frameworks PHP, Node.js, API, sécurité, performance)<br />
+-Programmation orientée objet (PHP, Python, C++, Java) et développement mobile (iOS, Android, hybride)<br />
+-Méthodes de développement (spécifications, qualité, DevOps) et gestion de projets (chiffrage, devis, planning)<br />
+-Marketing digital, e-commerce, SEO et Cloud computing (AWS)<br />
+-UX Design, droit informatique et initiation IA / Machine Learning / blockchain<br />
           </>
         ),
       },
@@ -228,12 +199,9 @@ achievements: [
         name: "RNCP Niveau 5 (Bac +2) – Développeuse web — OpenClassrooms (2018 - 2019)",
         description: (
           <>
-            -Intégration en HTML5 et CSS<br />
--Respect des standards et des normes du Web, référencement SEO, et optimisation pour tout type d’écran
--Développement de pages dynamique en JavaScript<br />
--Consommation de service API<br />
--Programmation en orienté objet, gestion des erreurs et exceptions<br />
--Créer, gérer et afficher le contenu d’une base de données
+            -Intégration HTML5/CSS conforme aux standards du Web, SEO et responsive<br />
+-Développement JavaScript dynamique et consommation d’API<br />
+-Programmation orientée objet, gestion des erreurs et des bases de données
           </>
         ),
       },
@@ -253,6 +221,7 @@ achievements: [
           { name: "Chiffrage / estimation" },
           { name: "Spécifications fonctionnelles" },
           { name: "Méthodes Agile / Jira" },
+          { name: "Linear" },
         ],
       },
       {
@@ -282,6 +251,7 @@ achievements: [
           { name: "SSL", icon: "ssl" },
           { name: "FTP", icon: "ftp" },
           { name: "Figma", icon: "figma" },
+          { name: "Git", icon: "git" },
         ],
       },
       {

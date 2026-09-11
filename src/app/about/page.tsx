@@ -118,10 +118,17 @@ export default function About() {
                       <Text variant="body-default-s">{person.email}</Text>
                     </SmartLink>
                   </Row>
-                <Row gap="8" vertical="center" className={styles.rowHover}>
-                  <Icon onBackground="brand-weak" name="linkedin" />
-                  <Text variant="body-default-s">@manon-gomez-mor</Text>
-                </Row>
+                {social.find((item) => item.name === "LinkedIn")?.link && (
+                  <Row gap="8" vertical="center" className={styles.rowHover}>
+                    <Icon onBackground="brand-weak" name="linkedin" />
+                    <SmartLink
+                      href={social.find((item) => item.name === "LinkedIn")!.link}
+                      suffixIcon="arrowUpRightFromSquare"
+                    >
+                      <Text variant="body-default-s">@manon-gomez-mor</Text>
+                    </SmartLink>
+                  </Row>
+                )}
                   <Row gap="8" vertical="center" className={styles.rowHover}>
                     <Icon onBackground="brand-weak" name="globe" />
                     <Text variant="body-default-s">{person.location}</Text>
