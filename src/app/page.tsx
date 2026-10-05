@@ -54,7 +54,7 @@ export default function Home() {
               textVariant="label-default-s"
               arrow={false}
             >
-              ✅ PHP • WordPress • Performance
+              ✅ Développement Full-Stack • Gestion de projet • Produit
             </Badge>
           </RevealFx>
 
@@ -72,8 +72,16 @@ export default function Home() {
 
           <RevealFx translateY="8" delay={0.25} fillWidth horizontal="center" paddingBottom="24">
             <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
-              J’accompagne entrepreneurs, indépendants et agences dans la création, l’optimisation et la maintenance
-              technique de leurs sites, avec un vrai souci de performance et de qualité de code.
+              De la définition du besoin à la mise en production, j’interviens sur l’ensemble du cycle d’un
+              projet : conseil, choix de la solution, conception, développement, suivi, recette, déploiement
+              et accompagnement des utilisateurs.
+            </Text>
+          </RevealFx>
+
+          <RevealFx translateY="8" delay={0.3} fillWidth horizontal="center" paddingBottom="24">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
+              Mon profil technique me permet autant de développer une solution que de comprendre ses
+              enjeux, anticiper les contraintes et faire le lien entre besoin métier et réalisation.
             </Text>
           </RevealFx>
 
@@ -82,19 +90,19 @@ export default function Home() {
               <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
                 <Row gap="8" vertical="center">
                   <Icon name="rocket" onBackground="brand-weak" />
-                  <Text variant="label-default-s">Esthétique</Text>
+                  <Text variant="label-default-s">Concevoir</Text>
                 </Row>
               </Badge>
               <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
                 <Row gap="8" vertical="center">
                   <Icon name="settings" onBackground="brand-weak" />
-                  <Text variant="label-default-s">Efficacité</Text>
+                  <Text variant="label-default-s">Développer</Text>
                 </Row>
               </Badge>
               <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
                 <Row gap="8" vertical="center">
                   <Icon name="code" onBackground="brand-weak" />
-                  <Text variant="label-default-s">Robustesse</Text>
+                  <Text variant="label-default-s">Piloter</Text>
                 </Row>
               </Badge>
             </Row>
@@ -150,213 +158,161 @@ export default function Home() {
         </Column>
       </Column>
 
-      <RevealFx translateY="12" delay={0.55}>
-        <Column fillWidth gap="24" paddingX="l">
+      <RevealFx translateY="12" delay={0.55} fillWidth>
+        <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
-              <Icon name="code" onBackground="brand-weak" />
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Mes compétences techniques
-              </Heading>
+              <Icon name="rocket" onBackground="brand-weak" />
+              <Heading as="h2" variant="display-strong-xs" wrap="balance">De l’idée à la mise en ligne</Heading>
               <Line background="brand-alpha-weak" flex={1} />
             </Row>
           </Row>
-
-          <Grid className={styles.skillsGrid} fillWidth gap="12" columns={3} m={{ columns: 2 }} s={{ columns: 1 }}>
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.05} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="code" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">Langages</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    PHP (POO, MVC), Symfony, Laravel, JavaScript, HTML5, CSS3
-                  </Text>
-                </Column>
-              </RevealFx>
+          <Text onBackground="neutral-weak" variant="body-default-l">
+            Un projet web ne commence pas par une ligne de code. J’accompagne chaque projet dans
+            sa globalité, depuis la compréhension du besoin jusqu’à sa prise en main par les utilisateurs.
+          </Text>
+          <Grid fillWidth gap="12" columns={2} s={{ columns: 1 }}>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Text variant="heading-strong-m" onBackground="brand-weak">01</Text>
+                  <Heading as="h3" variant="heading-strong-m">Cadrage & conseil</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Compréhension du besoin, des objectifs et des utilisateurs, analyse des contraintes, conseil sur les solutions possibles, définition du périmètre, estimation et planification.
+                </Text>
+              </Column>
             </Card>
-
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.1} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="database" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">Base de données</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    MySQL
-                  </Text>
-                </Column>
-              </RevealFx>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Text variant="heading-strong-m" onBackground="brand-weak">02</Text>
+                  <Heading as="h3" variant="heading-strong-m">Conception & développement</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Spécifications fonctionnelles et techniques, réflexion UX, conception des interfaces et développement de solutions web adaptées : applications, sites vitrines, e-commerce ou fonctionnalités sur mesure.
+                </Text>
+              </Column>
             </Card>
-
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.15} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="wordpress" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">CMS</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    WordPress (Elementor, ACF, hooks, API REST), Shopify, Wizishop
-                  </Text>
-                </Column>
-              </RevealFx>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Text variant="heading-strong-m" onBackground="brand-weak">03</Text>
+                  <Heading as="h3" variant="heading-strong-m">Pilotage & qualité</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Organisation et suivi du projet, priorisation des besoins, gestion des évolutions, échanges avec les différentes parties prenantes, tests, recette et corrections avant livraison.
+                </Text>
+              </Column>
             </Card>
-
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.2} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="tools" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">Outils</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    Git, VSCode, cPanel, FileZilla
-                  </Text>
-                </Column>
-              </RevealFx>
-            </Card>
-
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.25} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="seo" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">Transverses</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    SEO technique, UX/UI, optimisation des performances
-                  </Text>
-                </Column>
-              </RevealFx>
-            </Card>
-
-            <Card
-              className={styles.skillCard}
-              fillWidth
-              background="surface"
-              border="brand-alpha-weak"
-              radius="l"
-              padding="m"
-              shadow="m"
-              cursor="interactive"
-            >
-              <RevealFx translateY="12" delay={0.3} fillWidth>
-                <Column className={styles.skillCardContent} fillWidth gap="8">
-                  <Row gap="12" vertical="center">
-                    <Icon name="education" onBackground="brand-weak" />
-                    <Text variant="heading-strong-m">Formation & pédagogie</Text>
-                  </Row>
-                  <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
-                    J’aime vulgariser la technique pour vous aider à comprendre votre outil.
-                  </Text>
-                </Column>
-              </RevealFx>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Text variant="heading-strong-m" onBackground="brand-weak">04</Text>
+                  <Heading as="h3" variant="heading-strong-m">Mise en production & accompagnement</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Déploiement, configuration de l’environnement, documentation, formation des utilisateurs et accompagnement après la mise en ligne pour faire évoluer la solution dans le temps.
+                </Text>
+              </Column>
             </Card>
           </Grid>
         </Column>
       </RevealFx>
 
-      <RevealFx translateY="12" delay={0.65}>
-        <Column fillWidth gap="24" paddingX="l">
+      <RevealFx translateY="12" delay={0.65} fillWidth>
+        <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
-              <Icon name="settings" onBackground="brand-weak" />
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Mes missions principales
-              </Heading>
+              <Icon name="code" onBackground="brand-weak" />
+              <Heading as="h2" variant="display-strong-xs" wrap="balance">Mes compétences</Heading>
               <Line background="brand-alpha-weak" flex={1} />
             </Row>
           </Row>
-          <Column as="ul" gap="12" style={{ listStyle: "none", paddingLeft: 0, margin: 0 }}>
-            {[
-              "Développement sur‑mesure en PHP / WordPress (thèmes & plugins personnalisés)",
-              "Intégration d’APIs et automatisations",
-              "Refonte ou optimisation de sites existants (vitesse, SEO, sécurité)",
-              "Création de sites vitrines & e‑commerce (WordPress, Shopify, Wizishop)",
-              "Configuration d’hébergement, migration, sauvegarde & HTTPS",
-              "Formation client à la prise en main du site",
-            ].map((item) => (
-              <Text key={item} as="li" variant="body-default-l">
-                <Icon name="arrowRight" onBackground="brand-weak" style={{ marginRight: "0.5rem" }} />
-                {item}
-              </Text>
-            ))}
-          </Column>
+          <Grid className={styles.skillsGrid} fillWidth gap="12" columns={3} m={{ columns: 2 }} s={{ columns: 1 }}>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Icon name="code" onBackground="brand-weak" />
+                  <Heading as="h3" variant="heading-strong-m">Développement Full-Stack</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  HTML, CSS, JavaScript, PHP, Node.js, React, Vue.js, Next.js, Laravel, Symfony, Sylius, MySQL, Tailwind CSS.
+                </Text>
+              </Column>
+            </Card>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Icon name="wordpress" onBackground="brand-weak" />
+                  <Heading as="h3" variant="heading-strong-m">CMS & e-commerce</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  WordPress, WooCommerce, Prestashop, Shopify, WiziShop, développement et intégration de fonctionnalités sur mesure.
+                </Text>
+              </Column>
+            </Card>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Icon name="settings" onBackground="brand-weak" />
+                  <Heading as="h3" variant="heading-strong-m">Gestion de projet</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Analyse des besoins, cahier des charges, spécifications fonctionnelles et techniques, chiffrage, planification, suivi de projet, recette, méthodes Agile, Scrum et Kanban, Jira et Linear.
+                </Text>
+              </Column>
+            </Card>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Icon name="seo" onBackground="brand-weak" />
+                  <Heading as="h3" variant="heading-strong-m">Produit, UX & qualité</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Expérience utilisateur, Figma, optimisation des parcours, performance web, accessibilité, SEO technique et amélioration continue.
+                </Text>
+              </Column>
+            </Card>
+            <Card className={styles.skillCard} fillWidth background="surface" border="brand-alpha-weak" radius="l" padding="m" shadow="m">
+              <Column className={styles.skillCardContent} fillWidth gap="12">
+                <Row gap="12" vertical="center">
+                  <Icon name="tools" onBackground="brand-weak" />
+                  <Heading as="h3" variant="heading-strong-m">Outils & automatisation</Heading>
+                </Row>
+                <Text className={styles.skillCardDescription} onBackground="neutral-weak" variant="body-default-m">
+                  Git, outils de déploiement et d’hébergement, n8n, ChatGPT, Cursor et outils d’IA intégrés aux workflows de développement.
+                </Text>
+              </Column>
+            </Card>
+          </Grid>
         </Column>
       </RevealFx>
 
-      <RevealFx translateY="12" delay={0.75}>
-        <Column fillWidth gap="24" paddingX="l">
+      <RevealFx translateY="12" delay={0.75} fillWidth>
+        <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
               <Icon name="person" onBackground="brand-weak" />
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Pourquoi travailler avec moi ?
-              </Heading>
+              <Heading as="h2" variant="display-strong-xs" wrap="balance">Un profil à la croisée de la technique et du projet</Heading>
               <Line background="brand-alpha-weak" flex={1} />
             </Row>
           </Row>
-          <Column as="ul" gap="12" style={{ listStyle: "none", paddingLeft: 0, margin: 0 }}>
-            {[
-              "Écoute, clarté & accompagnement à chaque étape",
-              "Code propre, commenté & maintenable",
-              "Réactivité & disponibilité",
-              "Double approche : technique & humaine (je suis aussi formatrice web)",
-            ].map((item) => (
-              <Text key={item} as="li" variant="body-default-l">
-                <Icon name="arrowRight" onBackground="brand-weak" style={{ marginRight: "0.5rem" }} />
-                {item}
-              </Text>
-            ))}
-          </Column>
+          <Text onBackground="neutral-weak" variant="body-default-l">
+            Mon parcours de développeuse Full-Stack me permet de comprendre concrètement les
+            contraintes techniques d’un projet, d’évaluer la faisabilité d’une demande et d’échanger
+            efficacement avec des équipes de développement.
+          </Text>
+          <Text onBackground="neutral-weak" variant="body-default-l">
+            Mon expérience en freelance m’a également amenée à gérer des projets en autonomie :
+            compréhension du besoin, recommandations, devis, planification, développement, échanges
+            clients, recette, livraison et maintenance.
+          </Text>
+          <Text onBackground="neutral-weak" variant="body-default-l">
+            Enfin, mon expérience de formatrice en développement web m’a appris à rendre des sujets
+            techniques accessibles, à adapter mon discours à différents interlocuteurs et à
+            accompagner les utilisateurs dans la prise en main de leurs outils.
+          </Text>
           <Row fillWidth horizontal="center" paddingTop="12">
             <Button href="/contact" variant="primary" size="m" arrowIcon>
               🚀 Prête à échanger dès aujourd’hui
@@ -388,23 +344,14 @@ export default function Home() {
                   <Text variant="heading-strong-xl">Découvrir mon portfolio</Text>
                 </Row>
                 <Text variant="body-default-l" onBackground="neutral-weak">
-                  Retrouvez une sélection de projets et de réalisations : sites WordPress sur‑mesure, développements PHP, React,
-                  optimisations performance & SEO technique, e‑commerce, et intégrations/automatisations.
+                  Sites vitrines, e-commerce, applications et fonctionnalités sur mesure : découvrez une
+                  sélection de projets sur lesquels je suis intervenue en développement, conception,
+                  optimisation ou pilotage.
                 </Text>
-                <Row gap="8" wrap>
-                  <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
-                    WordPress
-                  </Badge>
-                  <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
-                    PHP
-                  </Badge>
-                  <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
-                    E‑commerce
-                  </Badge>
-                  <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
-                    Performance
-                  </Badge>
-                </Row>
+                <Text variant="body-default-l" onBackground="neutral-weak">
+                  Pour chaque projet, l’objectif reste le même : partir d’un besoin concret pour construire une
+                  solution utile, fiable et adaptée à ses utilisateurs.
+                </Text>
               </Column>
               <Button href="/work" variant="primary" size="m" arrowIcon>
                 Accéder au portfolio

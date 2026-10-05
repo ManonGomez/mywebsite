@@ -13,6 +13,11 @@ type Metadata = {
   title: string;
   subtitle?: string;
   publishedAt: string;
+  selected: boolean;
+  order: number;
+  product: string;
+  development: string;
+  stack: string;
   summary: string;
   image?: string;
   images: string[];
@@ -40,6 +45,11 @@ function readMDXFile(filePath: string) {
   const { data, content } = matter(rawContent);
 
   const metadata: Metadata = {
+    selected: data.selected === true,
+    order: data.order ?? 99,
+    product: data.product || "",
+    development: data.development || "",
+    stack: data.stack || "",
     title: data.title || "",
     subtitle: data.subtitle || "",
     publishedAt: data.publishedAt,

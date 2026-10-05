@@ -55,7 +55,7 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Accueil",
   title: `Portfolio – ${person.name}`,
-  description: `Développeuse web spécialisée PHP & WordPress : création, optimisation et maintenance de sites performants.`,
+  description: `Développeuse Full-Stack : conception, développement et pilotage de projets web, du besoin à la mise en production.`,
   headline: <>Donner vie à votre site de rêve, de la conception à la mise en ligne</>,
   featured: {
     display: false,
@@ -64,9 +64,8 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis <Text as="span" size="xl" weight="strong">{person.firstName}</Text>, développeuse web passionnée,
-      spécialisée en <Text as="span" size="xl" weight="strong">PHP</Text> et{" "}
-      <Text as="span" size="xl" weight="strong">WordPress</Text> depuis 7 ans.
+      Je suis <Text as="span" size="xl" weight="strong">{person.firstName}</Text>, développeuse{' '}
+      <Text as="span" size="xl" weight="strong">Full-Stack</Text> spécialisée dans la conception et la réalisation de projets web.
     </>
   ),
 };
@@ -273,7 +272,7 @@ const work: Work = {
   path: "/work",
   label: "Portfolio",
   title: `Projets – ${person.name}`,
-  description: `Projets et réalisations de ${person.name}`,
+  description: `Six projets sélectionnés : développement web, conception fonctionnelle et gestion de projet, du besoin à la mise en production.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

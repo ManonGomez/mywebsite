@@ -1,39 +1,8 @@
-.heroCard {
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition-micro-medium);
-  will-change: transform, filter;
-}
-
-.heroCard::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background:
-    radial-gradient(70% 70% at 18% 22%, rgba(0, 200, 255, 0.18), transparent 60%),
-    radial-gradient(70% 70% at 85% 75%, rgba(255, 80, 140, 0.10), transparent 60%);
-  opacity: 0.95;
-  pointer-events: none;
-}
-
-.heroCard::after {
-  content: "";
-  position: absolute;
-  inset: -35%;
-  border-radius: 999px;
-  background: radial-gradient(closest-side, rgba(0, 200, 255, 0.14), transparent 70%);
-  filter: blur(10px);
-  opacity: 0.8;
-  transform: translate3d(-12%, -10%, 0);
-  pointer-events: none;
-}
-
-.heroCard > * {
-  position: relative;
-}
-
-.heroSubline {
-  max-width: 60ch;
-}
-
+.page { width: 100%; }
+.hero { padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--brand-border-medium); border-radius: 1.5rem; background: radial-gradient(ellipse at 90% 0, var(--brand-alpha-weak), transparent 70%), var(--surface-background); h1 { font-size: clamp(2rem, 4.8vw, 3.5rem); line-height: 1.12; letter-spacing: -.045em; margin: 1.25rem 0 1.5rem; text-wrap: balance; } }
+.eyebrow { color: var(--brand-on-background-weak); font-size: .8rem; font-weight: 600; line-height: 1.6; margin: 0; }
+.intro { font-size: 1rem; line-height: 1.8; max-width: 72ch; color: var(--neutral-on-background-weak); margin: 0 0 1rem; strong { color: var(--neutral-on-background-strong); } }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0 2rem; }
+.approach { border-top: 1px solid var(--neutral-border-medium); padding-top: 1.5rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; span { font-size: .8rem; font-weight: 600; color: var(--brand-on-background-weak); } p { font-size: .85rem; line-height: 1.65; margin: .5rem 0 0; color: var(--neutral-on-background-weak); } }
+.contact { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--neutral-border-medium); border-radius: 1.5rem; background: var(--surface-background); margin-bottom: 2rem; h2 { font-size: 1.75rem; margin: .5rem 0 .75rem; letter-spacing: -.025em; } p:last-child { max-width: 55ch; line-height: 1.7; color: var(--neutral-on-background-weak); margin: 0; } > a { flex-shrink: 0; } }
+@media (max-width: 700px) { .approach { grid-template-columns: 1fr; gap: 1rem; } .contact { flex-direction: column; align-items: start; gap: 1.5rem; } }

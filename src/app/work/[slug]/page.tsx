@@ -101,6 +101,8 @@ export default async function Project({
         </Text>
         <Heading variant="display-strong-m">{post.metadata.title}</Heading>
       </Column>
+      {post.metadata.subtitle && <Text variant="body-default-l" onBackground="brand-weak">{post.metadata.subtitle}</Text>}
+      <Column maxWidth="s" align="center"><Text variant="body-default-l" onBackground="neutral-weak">{post.metadata.summary}</Text></Column>
       <Row marginBottom="32" horizontal="center">
         <Row gap="16" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}
@@ -136,12 +138,16 @@ export default async function Project({
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
+      <Row gap="12" wrap horizontal="center" marginTop="24">
+        <Button href="/work#projets" variant="secondary">Tous les projets</Button>
+        <Button href="/contact" variant="primary" arrowIcon>Échanger sur vos besoins</Button>
+      </Row>
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Projets similaires
+          Autres projets sélectionnés
         </Heading>
-        <Projects exclude={[post.slug]} range={[2]} />
+        <Projects exclude={[post.slug]} range={[1, 2]} />
       </Column>
       <ScrollToHash />
     </Column>

@@ -9,7 +9,7 @@ interface ProjectsProps {
 }
 
 export function Projects({ range, exclude }: ProjectsProps) {
-  let allProjects = getPosts(["src", "app", "work", "projects"]);
+  let allProjects = getPosts(["src", "app", "work", "projects"]).filter(post => post.metadata.selected);
 
   // Exclude by slug (exact match)
   if (exclude && exclude.length > 0) {
@@ -17,7 +17,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
   }
 
   const sortedProjects = allProjects.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+    return a.metadata.order - b.metadata.order;
   });
 
   const displayedProjects = range
