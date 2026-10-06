@@ -152,6 +152,8 @@ export interface About extends BasePageConfig {
     experiences: Array<{
       /** Company name */
       company: string;
+      logo?: string;
+      highlights?: string[];
       /** Timeframe of employment */
       timeframe: string;
       /** Role or job title */
@@ -181,6 +183,7 @@ export interface About extends BasePageConfig {
     institutions: Array<{
       /** Institution name */
       name: string;
+      logo?: string;
       /** Description of studies */
       description: React.ReactNode;
     }>;

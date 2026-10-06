@@ -64,8 +64,15 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis <Text as="span" size="xl" weight="strong">{person.firstName}</Text>, développeuse{' '}
-      <Text as="span" size="xl" weight="strong">Full-Stack</Text> spécialisée dans la conception et la réalisation de projets web.
+      Je suis{" "}
+      <Text as="span" size="xl" weight="strong">
+        {person.firstName}
+      </Text>
+      , développeuse{" "}
+      <Text as="span" size="xl" weight="strong">
+        Full-Stack
+      </Text>{" "}
+      spécialisée dans la conception et la réalisation de projets web.
     </>
   ),
 };
@@ -74,194 +81,402 @@ const about: About = {
   path: "/about",
   label: "À propos",
   title: `À propos – ${person.name}`,
-  description: `Compétences et parcours de ${person.name} — ${person.role}, au service de votre équipe.`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: false,
-    link: "",
-  },
-  tagline: "Gestion de projet • Coordination • Web & Digital • Développement",
+  description:
+    "Manon Gomez Mor : développement full-stack et pilotage de projets web depuis 2019. Expériences, compétences techniques, gestion de projet et formation.",
+  tableOfContent: { display: true, subItems: false },
+  avatar: { display: true },
+  calendar: { display: false, link: "" },
+  tagline: "Du besoin métier à la mise en production",
   intro: {
     display: true,
     title: "Présentation",
     description: (
       <>
-        Développeuse full-stack devenue passionnée de coordination et de pilotage de projets
-        web, j&apos;aime faire le lien entre les besoins métiers, les utilisateurs et les
-        équipes techniques pour faire avancer les projets de manière claire et pragmatique.
-        Après plusieurs années en indépendante, je recherche aujourd&apos;hui un poste de
-        cheffe de projet IT ou de coordinatrice de projets web, dans la continuité de mon
-        parcours technique.
+        Développeuse full-stack depuis 2019, je conçois, réalise et pilote des sites, plateformes
+        web et solutions e-commerce. Mon expérience en agence, en équipe et en freelance associe
+        développement front-end et back-end, cadrage, chiffrage, planification et relation client.
+        <br />
+        <br />
+        J’aime relier les attentes métiers, les usages et les contraintes techniques pour livrer des
+        solutions utiles et durables. La formation et le mentorat ont renforcé ma capacité à
+        expliquer, accompagner et faire progresser les autres. Je souhaite mettre ce parcours au
+        service d’une équipe, en développement full-stack ou en gestion de projet IT / produit.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Expériences",
     experiences: [
       {
         company: "Freelance",
-        timeframe: "Février 2022 - Aujourd'hui",
-        role: "Développeuse Full Stack",
-achievements: [
-  <>Gestion complète de projets web en autonomie, de la prospection commerciale au suivi post-production.</>,
-  <>Qualification des besoins clients (objectifs, contraintes, priorités) et audit technique de l’existant.</>,
-  <>Traduction des besoins en solutions adaptées, avec conseil sur les choix techniques et stratégiques.</>,
-  <>Chiffrage, devis et contractualisation, puis planification et suivi jusqu’à la livraison.</>,
-  <>Conception et développement de sites vitrines, plateformes web et solutions e-commerce sur mesure.</>,
-  <>Réunions de suivi, recette et correction des anomalies avant mise en production.</>,
-  <>Formation des clients à l’utilisation et à l’administration de leurs outils.</>,
-  <>Maintenance corrective et évolutive, assistance technique dans la durée.</>,
-  <>Optimisation de l’expérience utilisateur, du SEO et des performances des sites.</>,
-],
+        timeframe: "Février 2022 - Aujourd’hui",
+        role: "Développeuse full-stack",
+        logo: "/images/about/freelance.png",
+        highlights: ["Plus de 34 projets réalisés"],
+        achievements: [
+          "Qualifier les demandes et traduire les objectifs, usages et contraintes clients en solutions fonctionnelles et techniques.",
+          "Cadrer les projets : audit de l’existant, conseil, estimation des charges, chiffrage et propositions commerciales.",
+          "Planifier les étapes, organiser les priorités et animer les échanges de suivi : avancement, retours clients et ajustements.",
+          "Développer des sites, plateformes et boutiques sur mesure : front-end, back-end et intégration de services tiers.",
+          "Assurer la maintenance : analyser les incidents, corriger les anomalies et optimiser les performances et l’UX.",
+          "Environnement : PHP, JavaScript, React, Next.js, Laravel, Tailwind CSS, WordPress, WooCommerce, Shopify et MySQL.",
+          "Réaliser la recette et la mise en production ; former les clients et assurer l’assistance technique.",
+        ],
       },
       {
         company: "IT-Akademy",
         timeframe: "Janvier 2023 - Avril 2026",
         role: "Formatrice",
-achievements: [
-  <>Conception et animation de formations en développement web, projets numériques et UX, pour des publics variés (Bac+2 à Bac+5).</>,
-  <>Accompagnement individuel des apprenants : acquisition de compétences, résolution de difficultés, bonnes pratiques de code et d’accessibilité.</>,
-  <>Formation aux étapes clés d’un projet web (analyse du besoin, spécifications, chiffrage) et à la veille technologique.</>,
-  <>Enseignements dispensés : Développement front-end (HTML5, CSS3 et JavaScript) / Intégration web, UX et nouveaux usages liés à la transition numérique / Création de sites avec WordPress et de boutiques e-commerce avec WooCommerce / Programmation procédurale et programmation orientée objet en PHP / Écosystème PHP et prise en main des principaux outils du marché / Conception et rédaction de spécifications fonctionnelles et techniques / Méthodologie et initiation au chiffrage de projets / Veille technologique et professionnelle.</>,
-],
+        logo: "/images/about/it-akademy.png",
+        highlights: ["Plus de 17 sessions • Plus de 255 étudiants"],
+        achievements: [
+          "Enseigner HTML/CSS, JavaScript, PHP procédural et orienté objet, WordPress et WooCommerce, de Bac+2 à Bac+5.",
+          "Concevoir les exercices et aider à résoudre les difficultés techniques en adaptant la pédagogie.",
+          "Transmettre les bonnes pratiques de qualité du code, d’accessibilité et d’UX, ainsi que la rédaction de spécifications.",
+          "Enseigner le recueil des besoins, les spécifications et le chiffrage, de Bac+2 à Bac+5.",
+        ],
       },
       {
         company: "OpenClassrooms",
         timeframe: "Octobre 2022 - Décembre 2024",
         role: "Mentor",
-achievements: [
-  <>Accompagnement individuel d’étudiants des parcours Développeur WordPress et Intégrateur Web : suivi de progression, organisation du travail et résolution de difficultés.</>,
-  <>Transmission des bonnes pratiques (développement, intégration, qualité du code) et retours constructifs pour favoriser la montée en compétences.</>,
-  <>Adaptation de l’accompagnement au niveau et au rythme de chaque étudiant.</>,
-],
+        logo: "/images/about/openclassrooms.png",
+        highlights: ["Plus de 30 étudiants accompagnés"],
+        achievements: [
+          "Accompagner les projets des parcours Développeur WordPress et Intégrateur Web : analyse des difficultés et recherche de solutions.",
+          "Faire des retours sur les travaux et transmettre des bonnes pratiques de développement, de qualité et d’organisation.",
+          "Adapter l’accompagnement et les retours aux difficultés rencontrées pour développer les compétences et l’autonomie.",
+        ],
       },
       {
         company: "CISS",
         timeframe: "Mai 2022 - Novembre 2022",
-        role: "Développeuse Full Stack (Vue.js / Laravel)",
-  achievements: [
-  <>TMA de solutions de paiement : prise en charge des tickets, développement de fonctionnalités et correctifs avec Vue.js et Laravel.</>,
-  <>Maquettage d’interfaces sur Figma et participation aux revues de code.</>,
-  <>Travail en équipe en Kanban, gestion des versions avec Git et SVN.</>,
-],
+        role: "Développeuse front-end",
+        logo: "/images/about/ciss.png",
+        highlights: [],
+        achievements: [
+          "Développer des fonctionnalités et correctifs en Vue.js et Laravel pour la maintenance de solutions de paiement.",
+          "Analyser et suivre les tickets en Kanban ; concevoir des interfaces sur Figma et collaborer avec Git, SVN et les revues de code.",
+        ],
       },
       {
         company: "Synolia",
         timeframe: "Septembre 2021 - Mars 2022",
-        role: "Développeuse e-commerce (Sylius)",
-    achievements: [
-  <>TMA de projets e-commerce Sylius : analyse des tickets, développement de correctifs et d’évolutions fonctionnelles.</>,
-  <>Estimation et suivi des tâches dans Jira, participation aux cérémonies Agiles (sprints, rétrospectives) et au backlog d’équipe.</>,
-  <>Versionnement avec Git, code review et collaboration avec l’équipe de développement.</>,
-],
+        role: "Développeuse Symfony / Sylius",
+        logo: "/images/about/synolia.png",
+        highlights: [],
+        achievements: [
+          "Maintenir et faire évoluer plusieurs projets e-commerce sous Symfony / Sylius, PHP et Twig, selon les spécifications.",
+          "Analyser et estimer les tickets ; collaborer en Scrum avec Jira, Git et les revues de code.",
+          "Développer sous Symfony / Sylius selon les priorités du backlog ; participer aux planifications de sprint et rétrospectives.",
+        ],
       },
       {
         company: "Cyloé",
         timeframe: "Août 2019 - Septembre 2021",
-        role: "Développement & intégration web",
-       achievements: [
-  <>Pilotage de projets web de A à Z : recueil du besoin, planification et suivi jusqu’à la livraison.</>,
-  <>Conception et développement de sites vitrines, plateformes sur mesure et sites e-commerce.</>,
-  <>Gestion complète de l’environnement technique (hébergement, déploiement, mise en production) et recette avant livraison.</>,
-  <>Maintenance corrective et évolutive, analyse SEO et optimisation des performances et de l’UX.</>,
-  <>Formation des clients à l’utilisation de leurs outils, avec accompagnement dans la durée.</>,
-  <>Gestion simultanée de plusieurs clients de l’agence, en forte autonomie.</>,
-],
+        role: "Développeuse web",
+        logo: "/images/about/cyloe.png",
+        highlights: [],
+        achievements: [
+          "Développer des sites et boutiques avec WordPress, WooCommerce, Shopify, WiziShop, Joomla et PHP.",
+          "Gérer l’hébergement, le paramétrage et le déploiement ; assurer la recette, les corrections et les évolutions.",
+          "Optimiser le SEO, les performances et l’affichage multi-écrans ; former les clients et résoudre les incidents techniques.",
+          "Piloter plusieurs projets clients : besoins, planification, priorisation et suivi des délais, en autonomie.",
+        ],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Formation",
     institutions: [
       {
-        name: "Mastère 1 – Développeuse d’application full-stack — IT-AKADEMY (2019 - 2021)",
+        name: "Mastère 1 - Développeuse d’applications full-stack",
+        logo: "/images/about/it-akademy.png",
         description: (
           <>
-            -Génie logiciel, architectures et bases de données<br />
--Développement web (WordPress, JavaScript, frameworks PHP, Node.js, API, sécurité, performance)<br />
--Programmation orientée objet (PHP, Python, C++, Java) et développement mobile (iOS, Android, hybride)<br />
--Méthodes de développement (spécifications, qualité, DevOps) et gestion de projets (chiffrage, devis, planning)<br />
--Marketing digital, e-commerce, SEO et Cloud computing (AWS)<br />
--UX Design, droit informatique et initiation IA / Machine Learning / blockchain<br />
+            {"IT-AKADEMY / 2019 - 2021 • RNCP niveau 6 • En apprentissage"}
+            <ul>
+              <li>
+                {
+                  "Développement web et POO : PHP, JavaScript, Node.js, Python, Java, API, frameworks et design patterns."
+                }
+              </li>
+              <li>
+                {
+                  "Bases de données : conception, administration et optimisation ; architecture, sécurité et performance."
+                }
+              </li>
+              <li>
+                {
+                  "Gestion de projet : besoins, spécifications, cahiers des charges, chiffrage, planification et coordination."
+                }
+              </li>
+              <li>{"Qualité logicielle, DevOps, cloud AWS, UX design, SEO et e-commerce."}</li>
+            </ul>
           </>
         ),
       },
       {
-        name: "RNCP Niveau 5 (Bac +2) – Développeuse web — OpenClassrooms (2018 - 2019)",
+        name: "Développeuse web",
+        logo: "/images/about/openclassrooms.png",
         description: (
           <>
-            -Intégration HTML5/CSS conforme aux standards du Web, SEO et responsive<br />
--Développement JavaScript dynamique et consommation d’API<br />
--Programmation orientée objet, gestion des erreurs et des bases de données
+            {"OPENCLASSROOMS / 2018 - 2019 • RNCP niveau 5 (Bac+2)"}
+            <ul>
+              <li>{"Intégration de sites responsives en HTML5/CSS3."}</li>
+              <li>
+                {"Développement de fonctionnalités dynamiques en JavaScript et intégration d’API."}
+              </li>
+              <li>
+                {
+                  "Programmation orientée objet, gestion des erreurs et bonnes pratiques de développement."
+                }
+              </li>
+              <li>{"Conception et exploitation de bases de données."}</li>
+              <li>{"Optimisation SEO, performances et compatibilité multi-écrans."}</li>
+            </ul>
           </>
         ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Compétences",
     skills: [
       {
-        title: "Hard skills",
-        description: "Gestion de projet et méthodologie.",
+        title: "Gestion de projet",
+        description:
+          "Analyser les besoins, cadrer et chiffrer les projets, organiser les priorités et suivre la livraison. Méthodes Agile, Scrum et Kanban.",
         tags: [
-          { name: "Gestion de projet" },
-          { name: "Analyse des besoins" },
-          { name: "Cahier des charges" },
-          { name: "Chiffrage / estimation" },
-          { name: "Spécifications fonctionnelles" },
-          { name: "Méthodes Agile / Jira" },
-          { name: "Linear" },
+          {
+            name: "Analyse des besoins",
+          },
+          {
+            name: "Audit de l’existant",
+          },
+          {
+            name: "Spécifications fonctionnelles et techniques",
+          },
+          {
+            name: "Cahier des charges",
+          },
+          {
+            name: "Estimation des charges",
+          },
+          {
+            name: "Chiffrage & devis",
+          },
+          {
+            name: "Planification",
+          },
+          {
+            name: "Priorisation",
+          },
+          {
+            name: "Suivi d’avancement",
+          },
+          {
+            name: "Recette",
+          },
+          {
+            name: "Relation client",
+          },
+          {
+            name: "Agile",
+          },
+          {
+            name: "Scrum",
+          },
+          {
+            name: "Kanban",
+          },
+          {
+            name: "Revues de code",
+          },
+          {
+            name: "Jira",
+            icon: "jira",
+          },
+          {
+            name: "Linear",
+            icon: "linear",
+          },
         ],
       },
       {
-        title: "Technique",
-        description: "Stack et outils de développement web.",
+        title: "Développement web",
+        description:
+          "Concevoir et maintenir des sites, applications et boutiques : interfaces, back-end, bases de données et intégration d’API.",
         tags: [
-          { name: "HTML", icon: "html" },
-          { name: "CSS", icon: "css" },
-          { name: "Bootstrap", icon: "bootstrap" },
-          { name: "Tailwind", icon: "tailwind" },
-          { name: "JavaScript", icon: "javascript" },
-          { name: "React", icon: "react" },
-          { name: "Vue.js", icon: "vue" },
-          { name: "JavaScript Vanilla", icon: "javascript" },
-          { name: "PHP", icon: "php" },
-          { name: "Laravel", icon: "laravel" },
-          { name: "Symfony", icon: "symfony" },
-          { name: "Sylius", icon: "cart" },
-          { name: "PHP Vanilla", icon: "php" },
-          { name: "Node.js", icon: "nodejs" },
-          { name: "WordPress", icon: "wordpress" },
-          { name: "Prestashop", icon: "prestashop" },
-          { name: "Shopify", icon: "shopify" },
-          { name: "WiziShop", icon: "cart" },
-          { name: "MySQL", icon: "mysql" },
-          { name: "DNS", icon: "dns" },
-          { name: "SSL", icon: "ssl" },
-          { name: "FTP", icon: "ftp" },
-          { name: "Figma", icon: "figma" },
-          { name: "Git", icon: "git" },
+          {
+            name: "HTML5",
+            icon: "html",
+          },
+          {
+            name: "CSS3",
+            icon: "css",
+          },
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "React",
+            icon: "react",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "Vue.js",
+            icon: "vue",
+          },
+          {
+            name: "Tailwind CSS",
+            icon: "tailwind",
+          },
+          {
+            name: "Bootstrap",
+            icon: "bootstrap",
+          },
+          {
+            name: "PHP",
+            icon: "php",
+          },
+          {
+            name: "Laravel",
+            icon: "laravel",
+          },
+          {
+            name: "Symfony",
+            icon: "symfony",
+          },
+          {
+            name: "Sylius",
+            icon: "sylius",
+          },
+          {
+            name: "Twig",
+            icon: "code",
+          },
+          {
+            name: "MySQL",
+            icon: "mysql",
+          },
+          {
+            name: "API REST",
+            icon: "code",
+          },
+          {
+            name: "WordPress",
+            icon: "wordpress",
+          },
+          {
+            name: "WooCommerce",
+            icon: "woocommerce",
+          },
+          {
+            name: "Shopify",
+            icon: "shopify",
+          },
+          {
+            name: "WiziShop",
+            icon: "cart",
+          },
+          {
+            name: "Joomla",
+            icon: "joomla",
+          },
         ],
       },
       {
-        title: "Soft skills",
+        title: "Outils & automatisation",
+        description: "Maquettage, versionnement, mise en production, optimisation et outils d’IA.",
         tags: [
-          { name: "Organisation" },
-          { name: "Rigueur" },
-          { name: "Détermination" },
-          { name: "Persévérance" },
-          { name: "Communication" },
-          { name: "Autonomie" },
+          {
+            name: "Figma",
+            icon: "figma",
+          },
+          {
+            name: "Git",
+            icon: "git",
+          },
+          {
+            name: "SVN",
+            icon: "svn",
+          },
+          {
+            name: "DNS",
+            icon: "dns",
+          },
+          {
+            name: "SSL",
+            icon: "ssl",
+          },
+          {
+            name: "FTP",
+            icon: "ftp",
+          },
+          {
+            name: "SEO",
+            icon: "seo",
+          },
+          {
+            name: "Performance",
+            icon: "settings",
+          },
+          {
+            name: "n8n",
+            icon: "n8n",
+          },
+          {
+            name: "ChatGPT",
+            icon: "openai",
+          },
+          {
+            name: "Claude",
+            icon: "claude",
+          },
+          {
+            name: "Claude Code",
+            icon: "claude",
+          },
+          {
+            name: "Codex",
+            icon: "openai",
+          },
+          {
+            name: "Cursor",
+            icon: "cursor",
+          },
+        ],
+      },
+      {
+        title: "Savoir-être",
+        description: "Organiser, communiquer et accompagner les clients comme les équipes.",
+        tags: [
+          {
+            name: "Organisation",
+          },
+          {
+            name: "Rigueur",
+          },
+          {
+            name: "Autonomie",
+          },
+          {
+            name: "Communication",
+          },
+          {
+            name: "Pédagogie",
+          },
+          {
+            name: "Résolution de problèmes",
+          },
         ],
       },
     ],

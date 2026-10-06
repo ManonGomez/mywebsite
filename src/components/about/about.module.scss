@@ -68,7 +68,7 @@
     width: fit-content;
     margin-inline: auto;
     /* Compense la colonne gauche (flex 3) pour que le titre soit centré sur la page (colonne droite = 75%). */
-    transform: translateX(-16.666%);
+    transform: none;
 }
 
 @media (max-width: breakpoints.$s) {
@@ -83,4 +83,30 @@
     .blockAlign {
         align-self: center;
     }
+}
+.portrait {
+    width: 180px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: var(--radius-l);
+    border: 1px solid var(--brand-alpha-medium);
+}
+.companyLogo {
+    flex-shrink: 0;
+    object-fit: contain;
+    padding: 4px;
+    background: white;
+    border-radius: 10px;
+}
+.experienceCard {
+    padding: 24px;
+    border: 1px solid var(--neutral-alpha-weak);
+    border-radius: var(--radius-l);
+    background: var(--surface-background);
+}
+.avatar { max-width: 280px; }
+@media (max-width: breakpoints.$s) {
+    .avatar { max-width: 100%; width: 100%; }
+    .experienceCard { padding: 16px; }
 }
