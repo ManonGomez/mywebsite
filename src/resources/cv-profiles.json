@@ -1,0 +1,142 @@
+{
+  "tech": {
+    "role": "Développeuse full-stack",
+    "intro": "Développeuse full-stack depuis 2019, je développe et maintiens des sites, plateformes web et solutions e-commerce. Mon parcours associe projets clients en autonomie et travail en équipe sur des solutions de paiement et des applications Symfony / Sylius. J’allie analyse des besoins, résolution de problèmes et accompagnement technique.",
+    "achievements": [
+      [
+        "Développer des sites, plateformes et boutiques sur mesure : front-end, back-end et intégration de services tiers.",
+        "Auditer l’existant et traduire les besoins clients en solutions adaptées aux usages et contraintes.",
+        "Assurer la maintenance : analyser les incidents, corriger les anomalies et optimiser les performances et l’UX.",
+        "Environnement : PHP, JavaScript, React, Next.js, Laravel, Tailwind CSS, WordPress, WooCommerce, Shopify et MySQL.",
+        "Réaliser la recette et la mise en production ; former les clients et assurer l’assistance technique."
+      ],
+      [
+        "Enseigner HTML/CSS, JavaScript, PHP procédural et orienté objet, WordPress et WooCommerce, de Bac+2 à Bac+5.",
+        "Concevoir les exercices et aider à résoudre les difficultés techniques en adaptant la pédagogie.",
+        "Transmettre les bonnes pratiques de qualité du code, d’accessibilité et d’UX, ainsi que la rédaction de spécifications."
+      ],
+      [
+        "Accompagner les projets des parcours Développeur WordPress et Intégrateur Web : analyse des difficultés et recherche de solutions.",
+        "Faire des retours sur les travaux et transmettre des bonnes pratiques de développement, de qualité et d’organisation."
+      ],
+      [
+        "Développer des fonctionnalités et correctifs en Vue.js et Laravel pour la maintenance de solutions de paiement.",
+        "Analyser et suivre les tickets en Kanban ; concevoir des interfaces sur Figma et collaborer avec Git, SVN et les revues de code."
+      ],
+      [
+        "Maintenir et faire évoluer plusieurs projets e-commerce sous Symfony / Sylius, PHP et Twig, selon les spécifications.",
+        "Analyser et estimer les tickets ; collaborer en Scrum avec Jira, Git et les revues de code."
+      ],
+      [
+        "Développer des sites et boutiques avec WordPress, WooCommerce, Shopify, WiziShop, Joomla et PHP.",
+        "Gérer l’hébergement, le paramétrage et le déploiement ; assurer la recette, les corrections et les évolutions.",
+        "Optimiser le SEO, les performances et l’affichage multi-écrans ; former les clients et résoudre les incidents techniques."
+      ]
+    ],
+    "skills": [
+      [
+        "FRONT-END",
+        "HTML, CSS, JavaScript\nReact, Next.js, Vue.js\nTailwind CSS, Bootstrap"
+      ],
+      [
+        "BACK-END & DONNÉES",
+        "PHP, Laravel, Symfony, Sylius\nMySQL, API REST"
+      ],
+      [
+        "CMS & E-COMMERCE",
+        "WordPress, WooCommerce, Shopify, WiziShop, Joomla"
+      ],
+      [
+        "OUTILS & DÉPLOIEMENT",
+        "Git, SVN, Jira, Figma\nDNS, SSL, FTP"
+      ],
+      [
+        "IA & AUTOMATISATION",
+        "n8n, ChatGPT, Claude\nClaude Code, Codex, Cursor"
+      ]
+    ],
+    "education": [
+      [
+        "Développement web et POO : PHP, JavaScript, Node.js, Python, Java, API, frameworks et design patterns.",
+        "Bases de données : conception, administration et optimisation ; architecture, sécurité et performance.",
+        "Qualité logicielle, DevOps, cloud AWS, UX design, SEO et e-commerce.",
+        "Gestion de projet : besoins, spécifications, cahiers des charges, chiffrage, planification et coordination."
+      ],
+      [
+        "Intégration de sites responsives en HTML5/CSS3.",
+        "Développement de fonctionnalités dynamiques en JavaScript et intégration d’API.",
+        "Programmation orientée objet, gestion des erreurs et bonnes pratiques de développement.",
+        "Conception et exploitation de bases de données.",
+        "Optimisation SEO, performances et compatibilité multi-écrans."
+      ]
+    ]
+  },
+  "project": {
+    "role": "Cheffe de projet IT / Product Owner",
+    "intro": "Depuis 2019, je réalise et pilote des projets web, du recueil des besoins au suivi après livraison. Mon expérience en agence et en freelance associe cadrage, chiffrage, planification et relation client. Ma culture full-stack m’aide à relier les attentes métiers, les usages et les contraintes techniques.",
+    "achievements": [
+      [
+        "Qualifier les demandes et traduire les objectifs, usages et contraintes clients en solutions fonctionnelles et techniques.",
+        "Cadrer les projets : audit de l’existant, conseil, estimation des charges, chiffrage et propositions commerciales.",
+        "Planifier les étapes, organiser les priorités et animer les échanges de suivi : avancement, retours clients et ajustements.",
+        "Réaliser les sites, plateformes et boutiques ; assurer la recette, les corrections et la mise en production.",
+        "Accompagner l’adoption des outils : formation des clients, maintenance et suivi des demandes d’évolution."
+      ],
+      [
+        "Enseigner le recueil des besoins, les spécifications et le chiffrage, de Bac+2 à Bac+5.",
+        "Concevoir et animer des formations en développement web et UX, avec des mises en pratique adaptées aux niveaux.",
+        "Vulgariser les concepts techniques, guider la résolution de difficultés et transmettre les bonnes pratiques de qualité."
+      ],
+      [
+        "Suivre les projets d’étudiants WordPress et Intégrateur Web : organisation, prochaines étapes et objectifs pédagogiques.",
+        "Adapter l’accompagnement et les retours aux difficultés rencontrées pour développer les compétences et l’autonomie."
+      ],
+      [
+        "Analyser et traiter les tickets de maintenance de solutions de paiement en Vue.js / Laravel ; suivre leur statut en Kanban.",
+        "Contribuer à la conception d’interfaces sur Figma et aux revues de code au sein de l’équipe."
+      ],
+      [
+        "Analyser les besoins des tickets e-commerce, estimer les tâches et suivre leur avancement dans Jira.",
+        "Développer sous Symfony / Sylius selon les priorités du backlog ; participer aux planifications de sprint et rétrospectives."
+      ],
+      [
+        "Piloter plusieurs projets clients : besoins, planification, priorisation et suivi des délais, en autonomie.",
+        "Réaliser les sites et boutiques, gérer l’hébergement, assurer la recette et la mise en production.",
+        "Former les clients, suivre les évolutions et la maintenance ; améliorer le SEO, les performances et l’expérience utilisateur."
+      ]
+    ],
+    "skills": [
+      [
+        "CADRAGE & PILOTAGE",
+        "Analyse des besoins, spécifications, estimation, chiffrage, planification, priorisation, suivi d’avancement, recette, relation client."
+      ],
+      [
+        "MÉTHODES & OUTILS",
+        "Agile, Scrum, Kanban\nJira, Linear, Figma, Git"
+      ],
+      [
+        "CULTURE TECHNIQUE",
+        "PHP, JavaScript, React, Vue.js, Laravel, Symfony / Sylius, WordPress, Shopify, MySQL"
+      ],
+      [
+        "OUTILS IA",
+        "ChatGPT, Claude\nClaude Code, Cursor"
+      ]
+    ],
+    "education": [
+      [
+        "Gestion de projet : besoins, spécifications, cahiers des charges, chiffrage, planification et coordination.",
+        "Qualité logicielle, DevOps, cloud AWS, UX design, SEO et e-commerce.",
+        "Développement web et POO : PHP, JavaScript, Node.js, Python, Java, API, frameworks et design patterns.",
+        "Bases de données : conception, administration et optimisation ; architecture, sécurité et performance."
+      ],
+      [
+        "Intégration de sites responsives en HTML5/CSS3.",
+        "Optimisation SEO, performances et compatibilité multi-écrans.",
+        "Développement de fonctionnalités dynamiques en JavaScript et intégration d’API.",
+        "Programmation orientée objet, gestion des erreurs et bonnes pratiques de développement.",
+        "Conception et exploitation de bases de données."
+      ]
+    ]
+  }
+}
