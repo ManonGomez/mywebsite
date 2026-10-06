@@ -6,7 +6,7 @@ import {
   IconButton,
   Line,
   Media,
-  RevealFx,
+  Flex,
   SmartLink,
   Tag,
   Text,
@@ -96,7 +96,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
             flex={3}
             horizontal="center"
           >
-            <RevealFx translateY="12">
+            <Flex>
               <Column fillWidth gap="m" horizontal="center">
                 <Image
                   className={styles.portrait}
@@ -156,7 +156,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                   </Row>
                 )}
               </Column>
-            </RevealFx>
+            </Flex>
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
@@ -192,12 +192,12 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 />
               </Row>
             )}
-            <RevealFx translateY="8">
+            <Flex>
               <Heading className={styles.textAlign} variant="display-strong-xl">
                 {person.name}
               </Heading>
-            </RevealFx>
-            <RevealFx translateY="8" delay={0.1}>
+            </Flex>
+            <Flex>
               <Text
                 className={styles.textAlign}
                 variant="display-default-xs"
@@ -205,9 +205,9 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
               >
                 {role ?? <>Développeuse full-stack<br />Cheffe de projet IT / Produit</>}
               </Text>
-            </RevealFx>
+            </Flex>
             {about.tagline && (
-              <RevealFx translateY="8" delay={0.15}>
+              <Flex>
                 <Text
                   className={styles.textAlign}
                   variant="body-default-m"
@@ -216,10 +216,10 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 >
                   {about.tagline}
                 </Text>
-              </RevealFx>
+              </Flex>
             )}
             {social.some((item) => item.essential && Boolean(item.link)) && (
-              <RevealFx translateY="8" delay={0.2}>
+              <Flex>
                 <Row
                   className={styles.blockAlign}
                   paddingTop="20"
@@ -260,16 +260,16 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                         ),
                     )}
                 </Row>
-              </RevealFx>
+              </Flex>
             )}
           </Column>
 
           {about.intro.display && (
-            <RevealFx translateY="12" delay={0.25}>
+            <Flex>
               <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
                 {about.intro.description}
               </Column>
-            </RevealFx>
+            </Flex>
           )}
 
           <Row wrap gap="12" marginBottom="32">
@@ -281,7 +281,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
 
           {about.work.display && (
             <>
-              <RevealFx translateY="12" delay={0.15}>
+              <Flex>
                 <Row fillWidth marginBottom="m">
                   <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
                     <Icon name="rocket" onBackground="brand-weak" />
@@ -293,13 +293,11 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 <Row fillWidth paddingY="24">
                   <Line background="brand-alpha-weak" />
                 </Row>
-              </RevealFx>
+              </Flex>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
-                  <RevealFx
+                  <Flex
                     key={`${experience.company}-${experience.role}-${index}`}
-                    translateY="12"
-                    delay={0.05 + index * 0.05}
                   >
                     <Column className={`${styles.hoverCard} ${styles.experienceCard}`} fillWidth>
                       <Row
@@ -380,7 +378,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                         </Row>
                       )}
                     </Column>
-                  </RevealFx>
+                  </Flex>
                 ))}
               </Column>
             </>
@@ -388,7 +386,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
 
           {about.studies.display && (
             <>
-              <RevealFx translateY="12" delay={0.15}>
+              <Flex>
                 <Row fillWidth marginBottom="m">
                   <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
                     <Icon name="document" onBackground="brand-weak" />
@@ -400,13 +398,11 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 <Row fillWidth paddingY="24">
                   <Line background="brand-alpha-weak" />
                 </Row>
-              </RevealFx>
+              </Flex>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
-                  <RevealFx
+                  <Flex
                     key={`${institution.name}-${index}`}
-                    translateY="12"
-                    delay={0.05 + index * 0.05}
                   >
                     <Column className={styles.hoverCard} fillWidth gap="4">
                       <Row gap="12" vertical="center">
@@ -427,7 +423,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                         {institution.description}
                       </Text>
                     </Column>
-                  </RevealFx>
+                  </Flex>
                 ))}
               </Column>
             </>
@@ -435,7 +431,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
 
           {about.technical.display && (
             <>
-              <RevealFx translateY="12" delay={0.15}>
+              <Flex>
                 <Row fillWidth marginBottom="40">
                   <Row className={styles.sectionTitleCenter} gap="12" vertical="center">
                     <Icon name="grid" onBackground="brand-weak" />
@@ -447,10 +443,10 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 <Row fillWidth paddingY="24">
                   <Line background="brand-alpha-weak" />
                 </Row>
-              </RevealFx>
+              </Flex>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <RevealFx key={skill.title} translateY="12" delay={0.05 + index * 0.05}>
+                  <Flex key={skill.title}>
                     <Column className={styles.hoverCard} fillWidth gap="4">
                       <Row gap="12" vertical="center">
                         <Icon name="grid" onBackground="brand-weak" />
@@ -492,13 +488,13 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                         </Row>
                       )}
                     </Column>
-                  </RevealFx>
+                  </Flex>
                 ))}
               </Column>
             </>
           )}
 
-          <RevealFx translateY="12" delay={0.2}>
+          <Flex>
             <Column fillWidth paddingTop="xl">
               <Card
                 background="surface"
@@ -529,7 +525,7 @@ export default function AboutPage({ about, role, cv, contactMessage, siteBaseURL
                 </Row>
               </Card>
             </Column>
-          </RevealFx>
+          </Flex>
         </Column>
       </Row>
     </Column>

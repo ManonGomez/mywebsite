@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   transition: var(--transition-micro-medium);
-  will-change: transform, filter;
 }
 
 .card::before {
@@ -79,8 +78,3 @@
   transform: translateY(calc(var(--static-space-2) * -1));
   filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.18));
 }
-
-.card:hover .arrow {
-  transform: translateX(var(--static-space-1)) rotate(-45deg);
-}
-

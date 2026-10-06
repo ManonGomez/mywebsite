@@ -18,5 +18,13 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
-  return [...routes, ...works];
+  const profiles = ["/about/developpeur-full-stack", "/about/chef-de-projet"]
+    .filter(path => !activeRoutes.includes(path))
+    .map(path => ({ url: `${baseURL}${path}`, lastModified: new Date().toISOString().split("T")[0] }));
+  return [...routes, ...profiles, ...works].flatMap(entry => {
+    const path = entry.url.slice(baseURL.length);
+    const englishURL = `${baseURL}/en${path}`;
+    const alternates = { languages: { fr: entry.url, en: englishURL } };
+    return [{ ...entry, alternates }, { ...entry, url: englishURL, alternates }];
+  });
 }

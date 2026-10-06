@@ -8,7 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from pypdf import PdfReader
-from update_cv_qr import PROFILE_URLS, draw_qr
+from update_cv_qr import profile_url, draw_qr
 
 ROOT = Path(__file__).resolve().parent.parent / 'public' / 'files'
 for name, file in [('CV','OpenSans-Regular.ttf'),('CVB','OpenSans-Bold.ttf')]:
@@ -251,11 +251,11 @@ def build(lang,mode):
     y=sidebar_section(d['sections'][4],y)
     y=para(d['languages'],16,y,140,8,color=muted)+22
     y=sidebar_section('PORTFOLIO',y)
-    profile_url = PROFILE_URLS[mode.upper()]
-    draw_qr(c, profile_url, 15, H-y-62)
+    url = profile_url(mode, lang)
+    draw_qr(c, url, 15, H-y-62)
     para('Pour accéder à mon CV en ligne' if lang=='fr' else 'To view my online CV',81,y+13,74,7.7,color=muted)
     para('manongomezmor.fr',81,y+38,74,6.8,True,white)
-    c.linkURL(profile_url,(15,H-y-62,155,H-y),relative=0)
+    c.linkURL(url,(15,H-y-62,155,H-y),relative=0)
     assert y+62<826,('sidebar overflow',lang,mode,y+62)
     spaced('MANON GOMEZ MOR',258,24,21,NAVY)
     para(d[mode+'_title'],258,56,318,17 if mode=='project' else 20,True,GRAY,25)

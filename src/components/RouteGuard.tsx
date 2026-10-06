@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { routes } from "@/resources";
 import { Flex, Spinner } from "@once-ui-system/core";
 import NotFound from "@/app/not-found";
+import { pathInLanguage } from "@/utils/language";
 
 interface RouteGuardProps {
   children: React.ReactNode;
@@ -15,8 +16,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
 
   const normalizedPathname = useMemo(() => {
     if (!pathname) return null;
-    if (pathname === "/") return "/";
-    return pathname.replace(/\/$/, "");
+    return pathInLanguage(pathname, "fr").replace(/\/$/, "") || "/";
   }, [pathname]);
 
   const isRouteEnabled = useMemo(() => {

@@ -8,6 +8,8 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 import { routes, display, person, about, work } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { languageFromPath, pathInLanguage } from "@/utils/language";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -44,6 +46,9 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const language = languageFromPath(pathname);
+  const pagePath = pathInLanguage(pathname, "fr").replace(/\/$/, "") || "/";
+  const localizedPath = (path: string) => pathInLanguage(path, language);
 
   return (
     <>
@@ -87,7 +92,7 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href={localizedPath("/")} aria-label={language === "en" ? "Home" : "Accueil"} selected={pagePath === "/"} />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
@@ -95,16 +100,17 @@ export const Header = () => {
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="person"
-                      href="/about"
-                      label={about.label}
-                      selected={pathname === "/about"}
+                      href={localizedPath("/about")}
+                      label={language === "en" ? "About" : about.label}
+                      selected={pagePath.startsWith("/about")}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="person"
-                      href="/about"
-                      selected={pathname === "/about"}
+                      href={localizedPath("/about")}
+                      aria-label={language === "en" ? "About" : about.label}
+                      selected={pagePath.startsWith("/about")}
                     />
                   </Row>
                 </>
@@ -114,16 +120,17 @@ export const Header = () => {
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="email"
-                      href="/contact"
+                      href={localizedPath("/contact")}
                       label="Contact"
-                      selected={pathname.startsWith("/contact")}
+                      selected={pagePath.startsWith("/contact")}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="email"
-                      href="/contact"
-                      selected={pathname.startsWith("/contact")}
+                      href={localizedPath("/contact")}
+                      aria-label="Contact"
+                      selected={pagePath.startsWith("/contact")}
                     />
                   </Row>
                 </>
@@ -133,20 +140,23 @@ export const Header = () => {
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="grid"
-                      href="/work"
+                      href={localizedPath("/work")}
                       label={work.label}
-                      selected={pathname.startsWith("/work")}
+                      selected={pagePath.startsWith("/work")}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="grid"
-                      href="/work"
-                      selected={pathname.startsWith("/work")}
+                      href={localizedPath("/work")}
+                      aria-label={work.label}
+                      selected={pagePath.startsWith("/work")}
                     />
                   </Row>
                 </>
               )}
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <LanguageSwitcher />
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

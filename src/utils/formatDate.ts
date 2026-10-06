@@ -1,4 +1,4 @@
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string, includeRelative = false, locale = "fr-FR") {
   const now = new Date();
 
   if (!date.includes("T")) {
@@ -7,7 +7,7 @@ export function formatDate(date: string, includeRelative = false) {
 
   const target = new Date(date);
 
-  const fullDate = target.toLocaleDateString("fr-FR", {
+  const fullDate = target.toLocaleDateString(locale, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -15,7 +15,7 @@ export function formatDate(date: string, includeRelative = false) {
 
   if (!includeRelative) return fullDate;
 
-  const rtf = new Intl.RelativeTimeFormat("fr", { numeric: "auto" });
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
   const diffDays = Math.round((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 
   // Pick a human-friendly unit.

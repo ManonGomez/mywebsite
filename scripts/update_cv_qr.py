@@ -17,6 +17,11 @@ PROFILE_URLS = {
 }
 
 
+def profile_url(mode, lang):
+    url = PROFILE_URLS[mode.upper()]
+    return url.replace('https://manongomezmor.fr/', 'https://manongomezmor.fr/en/') if lang.lower() == 'en' else url
+
+
 def draw_qr(c, url, x, y, size=62):
     qr = QrCodeWidget(url, barLevel='M')
     x0, y0, x1, y1 = qr.getBounds()
@@ -55,4 +60,4 @@ def update(path, url):
 if __name__ == '__main__':
     for mode, url in PROFILE_URLS.items():
         for lang in ('FR', 'EN'):
-            update(ROOT / f'CV-Manon-Gomez-Mor-{mode}-{lang}.pdf', url)
+            update(ROOT / f'CV-Manon-Gomez-Mor-{mode}-{lang}.pdf', profile_url(mode, lang))

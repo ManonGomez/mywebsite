@@ -12,7 +12,6 @@
   display: flex;
   overflow: hidden;
   transition: var(--transition-micro-medium);
-  will-change: transform, filter;
 }
 
 .skillCard::before {
@@ -54,7 +53,6 @@
   position: relative;
   overflow: hidden;
   transition: var(--transition-micro-medium);
-  will-change: transform, filter;
   min-height: 180px;
 }
 
@@ -79,7 +77,6 @@
   filter: blur(8px);
   opacity: 0.8;
   transform: translate3d(-10%, -10%, 0);
-  animation: portfolioGlow 5.5s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -91,24 +88,3 @@
   transform: translateY(calc(var(--static-space-2) * -1));
   filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.18));
 }
-
-.portfolioIcon {
-  transition: var(--transition-micro-medium);
-}
-
-.portfolioCta:hover .portfolioIcon {
-  transform: translateY(calc(var(--static-space-1) * -1));
-}
-
-@keyframes portfolioGlow {
-  0% {
-    transform: translate3d(-10%, -10%, 0);
-  }
-  50% {
-    transform: translate3d(18%, 12%, 0);
-  }
-  100% {
-    transform: translate3d(-10%, -10%, 0);
-  }
-}
-

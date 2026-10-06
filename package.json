@@ -2,6 +2,11 @@
   "name": "@once-ui-system/magic-portfolio",
   "version": "2.3.0",
   "scripts": {
+    "predev": "node scripts/build_english.mjs",
+    "prebuild": "node scripts/build_english.mjs",
+    "preexport": "node scripts/build_english.mjs",
+    "postbuild": "node scripts/finalize_languages.mjs",
+    "postexport": "node scripts/finalize_languages.mjs",
     "dev": "next dev",
     "export": "next build",
     "build": "next build",

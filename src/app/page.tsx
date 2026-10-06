@@ -3,7 +3,7 @@ import {
   Text,
   Button,
   Avatar,
-  RevealFx,
+  Flex,
   Column,
   Badge,
   Row,
@@ -45,7 +45,7 @@ export default function Home() {
       />
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
-          <RevealFx fillWidth horizontal="center" paddingTop="16" paddingBottom="24">
+          <Flex fillWidth horizontal="center" paddingTop="16" paddingBottom="24">
             <Badge
               background="brand-alpha-weak"
               paddingX="12"
@@ -56,36 +56,36 @@ export default function Home() {
             >
               ✅ Développement Full-Stack • Gestion de projet • Produit
             </Badge>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+          <Flex fillWidth horizontal="center" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx translateY="8" delay={0.15} fillWidth horizontal="center" paddingBottom="16">
+          <Flex fillWidth horizontal="center" paddingBottom="16">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx translateY="8" delay={0.25} fillWidth horizontal="center" paddingBottom="24">
+          <Flex fillWidth horizontal="center" paddingBottom="24">
             <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
               De la définition du besoin à la mise en production, j’interviens sur l’ensemble du cycle d’un
               projet : conseil, choix de la solution, conception, développement, suivi, recette, déploiement
               et accompagnement des utilisateurs.
             </Text>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx translateY="8" delay={0.3} fillWidth horizontal="center" paddingBottom="24">
+          <Flex fillWidth horizontal="center" paddingBottom="24">
             <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
               Mon profil technique me permet autant de développer une solution que de comprendre ses
               enjeux, anticiper les contraintes et faire le lien entre besoin métier et réalisation.
             </Text>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx translateY="8" delay={0.35} fillWidth horizontal="center" paddingBottom="24">
+          <Flex fillWidth horizontal="center" paddingBottom="24">
             <Row gap="12" wrap horizontal="center">
               <Badge background="surface" border="neutral-alpha-weak" radius="full" paddingX="12" paddingY="4">
                 <Row gap="8" vertical="center">
@@ -106,9 +106,9 @@ export default function Home() {
                 </Row>
               </Badge>
             </Row>
-          </RevealFx>
+          </Flex>
 
-          <RevealFx paddingTop="12" delay={0.45} horizontal="center" paddingLeft="12">
+          <Flex paddingTop="12" horizontal="center" paddingLeft="12">
             <Row gap="12" wrap horizontal="center">
               <Button
                 id="contact"
@@ -154,11 +154,11 @@ export default function Home() {
                 </Row>
               </Button>
             </Row>
-          </RevealFx>
+          </Flex>
         </Column>
       </Column>
 
-      <RevealFx translateY="12" delay={0.55} fillWidth>
+      <Flex fillWidth>
         <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
@@ -218,9 +218,9 @@ export default function Home() {
             </Card>
           </Grid>
         </Column>
-      </RevealFx>
+      </Flex>
 
-      <RevealFx translateY="12" delay={0.65} fillWidth>
+      <Flex fillWidth>
         <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
@@ -287,9 +287,9 @@ export default function Home() {
             </Card>
           </Grid>
         </Column>
-      </RevealFx>
+      </Flex>
 
-      <RevealFx translateY="12" delay={0.75} fillWidth>
+      <Flex fillWidth>
         <Column as="section" fillWidth gap="24" paddingX="l">
           <Row fillWidth horizontal="center" marginBottom="8">
             <Row gap="12" vertical="center">
@@ -319,9 +319,9 @@ export default function Home() {
             </Button>
           </Row>
         </Column>
-      </RevealFx>
+      </Flex>
 
-      <RevealFx translateY="12" delay={0.85}>
+      <Flex>
         <Column fillWidth paddingX="l">
           <Card
             className={styles.portfolioCta}
@@ -340,7 +340,7 @@ export default function Home() {
             >
               <Column gap="12">
                 <Row gap="12" vertical="center">
-                  <Icon className={styles.portfolioIcon} name="rocket" onBackground="brand-weak" />
+                  <Icon name="rocket" onBackground="brand-weak" />
                   <Text variant="heading-strong-xl">Découvrir mon portfolio</Text>
                 </Row>
                 <Text variant="body-default-l" onBackground="neutral-weak">
@@ -359,7 +359,7 @@ export default function Home() {
             </Row>
           </Card>
         </Column>
-      </RevealFx>
+      </Flex>
     </Column>
   );
 }

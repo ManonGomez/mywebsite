@@ -52,3 +52,30 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Shared motion timings for every page and Once UI interaction. */
+:root {
+  --transition-duration-micro-short: 150ms;
+  --transition-duration-micro-medium: 150ms;
+  --transition-duration-micro-long: 150ms;
+  --transition-duration-macro-short: 180ms;
+  --transition-duration-macro-medium: 180ms;
+  --transition-duration-macro-long: 180ms;
+}
+
+.page-enter {
+  animation: page-enter 180ms ease-out;
+}
+
+@keyframes page-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -8,7 +8,10 @@ declare global {
   }
 }
 
-export default function TallyEmbed() {
+export default function TallyEmbed({
+  src = "https://tally.so/embed/QK7Z7l?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
+  title = "Formulaire de contact",
+}: { src?: string; title?: string } = {}) {
   useEffect(() => {
     const d = document;
     const scriptSrc = "https://tally.so/widgets/embed.js";
@@ -42,16 +45,15 @@ export default function TallyEmbed() {
 
   return (
     <iframe
-      data-tally-src="https://tally.so/embed/QK7Z7l?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      data-tally-src={src}
       loading="lazy"
       width="100%"
       height="313"
       frameBorder={0}
       marginHeight={0}
       marginWidth={0}
-      title="Formulaire de contact"
+      title={title}
       style={{ border: 0 }}
     />
   );
 }
-

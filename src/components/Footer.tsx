@@ -1,8 +1,13 @@
+"use client";
+
 import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
+import { usePathname } from "next/navigation";
+import { languageFromPath, pathInLanguage } from "@/utils/language";
 import { person, social } from "@/resources";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
+  const language = languageFromPath(usePathname() || "/");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -31,9 +36,9 @@ export const Footer = () => {
           <Text variant="body-default-s" onBackground="neutral-weak">
             •
           </Text>
-          <SmartLink href="/mentions-legales">
+          <SmartLink href={pathInLanguage("/mentions-legales", language)}>
             <Text variant="body-default-s" onBackground="neutral-weak">
-              Mentions légales
+              {language === "en" ? "Legal notice" : "Mentions légales"}
             </Text>
           </SmartLink>
         </Row>

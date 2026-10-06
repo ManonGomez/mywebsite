@@ -10,7 +10,6 @@ import {
   Flex,
   Meta,
   opacity,
-  RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
@@ -52,6 +51,17 @@ export default async function RootLayout({
               (function() {
                 try {
                   const root = document.documentElement;
+                  root.lang = /^\\/en(?:\\/|$)/.test(window.location.pathname) ? 'en' : 'fr';
+                  const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+                  if (requestedLanguage === 'en' || requestedLanguage === 'fr') {
+                    const barePath = window.location.pathname.replace(/^\\/en(?=\\/|$)/, '') || '/';
+                    const target = requestedLanguage === 'en' ? '/en' + (barePath === '/' ? '/' : barePath) : barePath;
+                    if (target !== window.location.pathname) {
+                      const query = new URLSearchParams(window.location.search);
+                      query.delete('lang');
+                      window.location.replace(target + (query.size ? '?' + query : '') + window.location.hash);
+                    }
+                  }
                   const defaultTheme = 'system';
                   
                   // Set defaults from config
@@ -113,7 +123,7 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
-          <RevealFx fill position="absolute">
+          <Flex fill position="absolute">
             <Background
               mask={{
                 x: effects.mask.x,
@@ -154,7 +164,7 @@ export default async function RootLayout({
                 color: effects.lines.color,
               }}
             />
-          </RevealFx>
+          </Flex>
           <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>

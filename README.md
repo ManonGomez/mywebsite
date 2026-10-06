@@ -89,3 +89,26 @@ See `LICENSE.txt` for more information.
 ## Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+# Français et anglais
+
+Le français est disponible à la racine, l’anglais sous `/en/`. Le bouton globe
+FR/EN du menu ouvre la même page dans l’autre langue. Les liens de navigation
+restent dans la langue courante. Les liens `?lang=en` et `?lang=fr` sont également
+acceptés et redirigent vers la version correspondante.
+
+Les vues anglaises sont générées depuis les composants partagés et les traductions
+de `scripts/translations-en.json`. `npm run dev`,
+`npm run build` et `npm run export` les régénèrent automatiquement. Ne pas modifier
+les fichiers générés dans `src/locales/en` ou les pages générées dans `src/app/en`.
+Après une modification de texte français, ajouter sa traduction au catalogue.
+`node scripts/build_english.mjs --audit` signale les textes contenant des accents
+encore absents du catalogue (les noms propres peuvent rester identiques).
+
+Les profils développement et projet téléchargent le CV FR ou EN selon leur URL.
+La page de contact française conserve son formulaire Tally. Pour afficher un
+formulaire anglais, définir `NEXT_PUBLIC_TALLY_EN_FORM_URL` avec l’URL embed d’un
+formulaire traduit dans Tally, puis reconstruire le site. En attendant, la page
+anglaise propose un contact par e-mail en anglais et le calendrier de réservation.
+Les QR codes anglais pointent vers `/en/about/developpeur-full-stack/` et
+`/en/about/chef-de-projet/`. `scripts/update_cv_qr.py` actualise les QR codes et leurs
+liens ; `scripts/build_cvs.py` utilise ces mêmes adresses lors d’une régénération.

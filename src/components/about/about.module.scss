@@ -1,16 +1,13 @@
 @use "../breakpoints.scss" as breakpoints;
 
 .hover {
-    transition: var(--transition-micro-medium);
-
     &:hover {
-        transform: translateX(var(--static-space-4));
+        color: var(--brand-on-background-strong);
     }
 }
 
 .hoverCard {
     transition: var(--transition-micro-medium);
-    will-change: transform, filter;
 
     &:hover {
         transform: translateY(calc(var(--static-space-2) * -1));
@@ -41,10 +38,8 @@
 }
 
 .rowHover {
-    transition: var(--transition-micro-medium);
-
     &:hover {
-        transform: translateX(var(--static-space-2));
+        color: var(--brand-on-background-strong);
     }
 }
 
