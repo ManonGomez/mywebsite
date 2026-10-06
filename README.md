@@ -100,6 +100,10 @@ Les vues anglaises sont générées depuis les composants partagés et les tradu
 de `scripts/translations-en.json`. `npm run dev`,
 `npm run build` et `npm run export` les régénèrent automatiquement. Ne pas modifier
 les fichiers générés dans `src/locales/en` ou les pages générées dans `src/app/en`.
+Ces fichiers générés sont aussi versionnés pour que les hébergeurs lançant
+directement `next build` disposent de toutes les routes anglaises. Après une
+modification, régénérer les vues avec `node scripts/build_english.mjs` et inclure
+les fichiers générés dans le commit.
 Après une modification de texte français, ajouter sa traduction au catalogue.
 `node scripts/build_english.mjs --audit` signale les textes contenant des accents
 encore absents du catalogue (les noms propres peuvent rester identiques).

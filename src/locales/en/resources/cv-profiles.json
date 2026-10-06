@@ -1,0 +1,142 @@
+{
+  "tech": {
+    "role": "Full-stack Developer",
+    "intro": "Full-stack developer since 2019, building and maintaining websites, web platforms and online stores. I have worked independently on client projects and in teams on payment solutions and Symfony / Sylius applications. I bring experience in requirements analysis, problem solving and technical support.",
+    "achievements": [
+      [
+        "Build custom websites, platforms and online stores: front-end, back-end and third-party service integration.",
+        "Analyse client needs and review existing systems to propose solutions suited to their users and constraints.",
+        "Maintain applications: investigate incidents, fix bugs and improve performance and user experience.",
+        "Tools and technologies: PHP, JavaScript, React, Next.js, Laravel, Tailwind CSS, WordPress, WooCommerce, Shopify and MySQL.",
+        "Carry out acceptance testing and deployment; train clients and provide technical support."
+      ],
+      [
+        "Taught HTML/CSS, JavaScript, procedural and object-oriented PHP, WordPress and WooCommerce to higher education students.",
+        "Designed practical exercises and helped students solve technical problems, adapting teaching to their skill levels.",
+        "Shared good practices in code quality, accessibility and UX, along with specification writing."
+      ],
+      [
+        "Helped WordPress development and web integration students analyse project difficulties and find solutions.",
+        "Reviewed their work and shared good practices in development, quality and work planning."
+      ],
+      [
+        "Developed features and fixes in Vue.js and Laravel as part of payment solution maintenance.",
+        "Analysed and tracked tickets using Kanban; designed interfaces in Figma and worked with Git, SVN and code reviews."
+      ],
+      [
+        "Maintained and improved several e-commerce projects using Symfony / Sylius, PHP and Twig, following specifications.",
+        "Analysed and estimated tickets; worked in Scrum with Jira, Git and code reviews."
+      ],
+      [
+        "Built websites and online stores with WordPress, WooCommerce, Shopify, WiziShop, Joomla and PHP.",
+        "Managed hosting, configuration and deployment; carried out acceptance testing, fixes and feature updates.",
+        "Improved SEO, performance and layouts across screen sizes; trained clients and solved technical incidents."
+      ]
+    ],
+    "skills": [
+      [
+        "FRONT-END",
+        "HTML, CSS, JavaScript\nReact, Next.js, Vue.js\nTailwind CSS, Bootstrap"
+      ],
+      [
+        "BACK-END & DATA",
+        "PHP, Laravel, Symfony, Sylius\nMySQL, REST APIs"
+      ],
+      [
+        "CMS & E-COMMERCE",
+        "WordPress, WooCommerce, Shopify, WiziShop, Joomla"
+      ],
+      [
+        "TOOLS & DEPLOYMENT",
+        "Git, SVN, Jira, Figma\nDNS, SSL, FTP"
+      ],
+      [
+        "AI & AUTOMATION",
+        "n8n, ChatGPT, Claude\nClaude Code, Codex, Cursor"
+      ]
+    ],
+    "education": [
+      [
+        "Web development and OOP: PHP, JavaScript, Node.js, Python, Java, APIs, frameworks and design patterns.",
+        "Database design, management and optimisation; software architecture, security and performance.",
+        "Methods and tools: software quality, DevOps, AWS cloud, UX design, SEO and e-commerce.",
+        "Project management: gathering needs, writing specifications, estimating costs, planning and coordination."
+      ],
+      [
+        "Responsive website development with HTML5/CSS3.",
+        "Dynamic JavaScript features and API integration.",
+        "Object-oriented programming, error handling and good development practices.",
+        "Database design and management.",
+        "SEO, performance and compatibility across screen sizes."
+      ]
+    ]
+  },
+  "project": {
+    "role": "IT Project Manager / Product Owner",
+    "intro": "Since 2019, I have built and managed web projects from gathering needs to support after launch. My agency and freelance experience covers project scope, cost estimates, planning and client communication. My full-stack background helps me connect business needs, user needs and technical constraints.",
+    "achievements": [
+      [
+        "Clarify client requests and turn goals, user needs and constraints into functional and technical solutions.",
+        "Define project scope: review existing systems, advise clients, estimate work and costs, and prepare proposals.",
+        "Plan stages, organise priorities and hold progress meetings to present work, gather feedback and adjust solutions.",
+        "Build websites, platforms and online stores; carry out acceptance testing, fix issues and deploy solutions.",
+        "Help clients use their tools through training, maintenance and follow-up on requests for changes."
+      ],
+      [
+        "Taught requirements analysis, specification writing and cost estimation to higher education students.",
+        "Designed and taught web development and UX courses, with practical work suited to different skill levels.",
+        "Explained technical concepts, helped students solve problems and shared good quality practices."
+      ],
+      [
+        "Tracked WordPress development and web integration student projects: work planning, next steps and learning goals.",
+        "Adapted support and feedback to each student’s difficulties to help them build skills and work independently."
+      ],
+      [
+        "Analysed and handled maintenance tickets for Vue.js / Laravel payment solutions; tracked ticket status using Kanban.",
+        "Helped design interfaces in Figma and took part in code reviews within the team."
+      ],
+      [
+        "Analysed e-commerce ticket requirements, estimated tasks and tracked progress in Jira.",
+        "Developed with Symfony / Sylius following backlog priorities; took part in sprint planning and retrospectives."
+      ],
+      [
+        "Managed several client projects independently: requirements, work planning, priorities and deadlines.",
+        "Built websites and online stores, managed hosting, carried out acceptance testing and deployed solutions.",
+        "Trained clients, handled changes and maintenance, and improved SEO, performance and user experience."
+      ]
+    ],
+    "skills": [
+      [
+        "PROJECT PLANNING",
+        "Requirements analysis, specifications, estimation, pricing, planning, task priorities, progress tracking, acceptance testing, client communication."
+      ],
+      [
+        "METHODS & TOOLS",
+        "Agile, Scrum, Kanban\nJira, Linear, Figma, Git"
+      ],
+      [
+        "TECHNICAL BACKGROUND",
+        "PHP, JavaScript, React, Vue.js, Laravel, Symfony / Sylius, WordPress, Shopify, MySQL"
+      ],
+      [
+        "AI TOOLS",
+        "ChatGPT, Claude\nClaude Code, Cursor"
+      ]
+    ],
+    "education": [
+      [
+        "Project management: gathering needs, writing specifications, estimating costs, planning and coordination.",
+        "Methods and tools: software quality, DevOps, AWS cloud, UX design, SEO and e-commerce.",
+        "Web development and OOP: PHP, JavaScript, Node.js, Python, Java, APIs, frameworks and design patterns.",
+        "Database design, management and optimisation; software architecture, security and performance."
+      ],
+      [
+        "Responsive website development with HTML5/CSS3.",
+        "SEO, performance and compatibility across screen sizes.",
+        "Dynamic JavaScript features and API integration.",
+        "Object-oriented programming, error handling and good development practices.",
+        "Database design and management."
+      ]
+    ]
+  }
+}
