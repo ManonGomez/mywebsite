@@ -341,6 +341,10 @@ const about: About = {
             icon: "php",
           },
           {
+            name: "Python",
+            icon: "python",
+          },
+          {
             name: "Laravel",
             icon: "laravel",
           },
